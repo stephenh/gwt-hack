@@ -1,0 +1,8 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:gwt='urn:import:com.google.gwt.user.client.ui'>
+  <gwt:HTMLPanel>
+    <h2 ui:field="heading">Client</h2>
+    <gwt:TextBox ui:field="name" />
+    <div>left: <gwt:Label ui:field="nameLeft" /></div>
+    <div><gwt:SubmitButton ui:field="submit" text="Submit" /></div>
+  </gwt:HTMLPanel>
+</ui:UiBinder>

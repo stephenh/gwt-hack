@@ -1,0 +1,12 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:gwt='urn:import:com.google.gwt.user.client.ui'>
+  <gwt:HTMLPanel>
+    <div style="margin: auto; width: 300px">
+      <h1>GwtHack</h1>
+      <div>
+        <gwt:Anchor ui:field="clientsAnchor">Clients</gwt:Anchor>
+        <gwt:Anchor ui:field="employeesAnchor">Employees</gwt:Anchor>
+        <gwt:SimplePanel ui:field="content" />
+      </div>
+    </div>
+  </gwt:HTMLPanel>
+</ui:UiBinder>

@@ -7,6 +7,6 @@
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.gwtmpv.generators.ViewGenerator"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="--inputDirectory src/main/java --packageName com.bizo.gwthack.client.app --outputDirectory target/gen-java-src"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="--inputDirectory src/main/java --packageName com.bizo.gwthack.client.app --outputDirectory bin/java"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="gwt-hack"/>
 </launchConfiguration>

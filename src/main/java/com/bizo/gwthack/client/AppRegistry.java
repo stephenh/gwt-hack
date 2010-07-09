@@ -5,7 +5,6 @@ import org.gwtmpv.dispatch.client.DispatchAsync;
 import org.gwtmpv.place.PlaceManager;
 import org.gwtmpv.place.tokenizer.Tokenizer;
 
-import com.bizo.gwthack.client.app.AppPresenter;
 import com.bizo.gwthack.client.app.AppViews;
 import com.bizo.gwthack.client.model.GClientRepository;
 
@@ -18,8 +17,6 @@ public interface AppRegistry {
   PlaceManager getPlaceManager();
 
   EventBus getEventBus();
-
-  AppPresenter getAppPresenter();
 
   GClientRepository getRepository();
 

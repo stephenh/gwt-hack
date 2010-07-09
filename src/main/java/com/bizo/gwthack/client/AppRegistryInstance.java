@@ -11,7 +11,6 @@ import org.gwtmpv.place.history.GwtHistory;
 import org.gwtmpv.place.tokenizer.DefaultTokenizer;
 import org.gwtmpv.place.tokenizer.Tokenizer;
 
-import com.bizo.gwthack.client.app.AppPresenter;
 import com.bizo.gwthack.client.app.AppViews;
 import com.bizo.gwthack.client.app.GwtViews;
 import com.bizo.gwthack.client.model.GClientRepository;
@@ -52,11 +51,6 @@ public class AppRegistryInstance implements AppRegistry {
   @Override
   public GClientRepository getRepository() {
     return repository;
-  }
-
-  @Override
-  public AppPresenter getAppPresenter() {
-    return new AppPresenter(this);
   }
 
   @Override

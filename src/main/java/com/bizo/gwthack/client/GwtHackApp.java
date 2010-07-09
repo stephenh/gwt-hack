@@ -19,7 +19,7 @@ public class GwtHackApp implements EntryPoint {
   }
 
   public void onModuleLoad(final AppRegistry registry) {
-    appPresenter = registry.getAppPresenter();
+    appPresenter = new AppPresenter(registry);
     appPresenter.bind();
 
     final PlaceManager places = registry.getPlaceManager();

@@ -24,10 +24,9 @@ Bonus:
 
 * presenter <-> view method calls
 * presenter <-> model method calls
-* presenter <-> presenter event buss
+* presenter <-> presenter event bus (originally...still the goal?)
 * pass around presenters that we can eagerly/late bind/unbind with their view
-* popping into view after async is mostly a child-only concern...empty container later has content
-* singleton presenters is so incredibly stupid
+* popping into view after async is mostly a child-only concern...empty container later has content. what about slide in/out?
 * ChildPresener.getShouldEarlyUnbind so parents know to unbind
 * Presenter.addOnUnbind event so places know to forget their cached version
 
@@ -60,12 +59,13 @@ Gwt notes:
 
 ----
 
- * Need to think about:
- * 
- * 1) Has user touched our field yet? If their on field one and do something wrong, we don't want field four to suddenly
- * throw an error. Though if they click 'continue' then we do want all fields to pipe up.
- * 
- * 2) Is our field relevant to the object's current state? E.g. is the ad an image ad but our field is a text field.
- * 
- * 3) Is our field waiting for a server-side validation request? E.g. check that a name is unique. How do we say our
- * validatity is pending?
+Need to think about:
+
+1) Has user touched our field yet? If their on field one and do something wrong, we don't want field four to suddenly throw an error. Though if they click 'continue' then we do want all fields to pipe up.
+
+2) Is our field relevant to the object's current state? E.g. is the ad an image ad but our field is a text field.
+
+3) Is our field waiting for a server-side validation request? E.g. check that a name is unique. How do we say our validatity is pending?
+
+4) What is the difference between a `Property<Boolean>` and a Rule? They both have true/false states that listeners will want to act on.
+

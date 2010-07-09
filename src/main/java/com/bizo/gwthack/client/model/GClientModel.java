@@ -24,7 +24,7 @@ public class GClientModel extends AbstractModel<GClientDto> {
   private boolean loaded;
 
   /** Made by the {@link GClientRepository}. */
-  GClientModel(final GClientRepository repo, final GClientDto dto) {
+  public GClientModel(final GClientRepository repo, final GClientDto dto) {
     this.repo = repo;
     b.set(dto);
   }

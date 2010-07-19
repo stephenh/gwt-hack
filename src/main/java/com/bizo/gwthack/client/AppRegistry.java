@@ -10,6 +10,8 @@ import com.bizo.gwthack.client.model.GClientRepository;
 
 public interface AppRegistry {
 
+  AppWidgets getAppWidgets();
+
   AppViews getAppViews();
 
   Tokenizer getTokenizer();

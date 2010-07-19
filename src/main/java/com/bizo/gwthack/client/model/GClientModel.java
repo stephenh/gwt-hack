@@ -2,6 +2,7 @@ package com.bizo.gwthack.client.model;
 
 import static org.gwtmpv.model.properties.NewProperty.stringProperty;
 
+import org.bindgen.Bindable;
 import org.gwtmpv.model.AbstractModel;
 import org.gwtmpv.model.properties.StringProperty;
 
@@ -15,6 +16,7 @@ import com.google.gwt.event.shared.HandlerRegistration;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
 /** Fun model stuff around the {@link GClientDto}. */
+@Bindable
 public class GClientModel extends AbstractModel<GClientDto> {
 
   private final GClientRepository repo;

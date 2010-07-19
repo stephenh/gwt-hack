@@ -4,6 +4,6 @@
   xmlns:mpv="urn:import:org.gwtmpv.widgets">
   <gwt:HTMLPanel>
     Some clients
-    <mpv:RowTable ui:field="clients"/>
+    <gwt:FlowPanel ui:field="clientsPanel"/>
   </gwt:HTMLPanel>
 </ui:UiBinder>

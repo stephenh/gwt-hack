@@ -15,7 +15,8 @@ public class GClientDto implements Serializable {
   public GClientDto() {
   }
 
-  public GClientDto(final String name) {
+  public GClientDto(final String id, final String name) {
+    this.id = id;
     this.name = name;
   }
 }

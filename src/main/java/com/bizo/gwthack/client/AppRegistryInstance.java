@@ -23,6 +23,7 @@ public class AppRegistryInstance implements AppRegistry {
   private final DispatchAsync async;
   private final Tokenizer tokenizer;
   private final AppViews views;
+  private final AppWidgets widgets;
 
   public AppRegistryInstance() {
     eventBus = new DefaultEventBus();
@@ -36,6 +37,7 @@ public class AppRegistryInstance implements AppRegistry {
     placeManager = new DefaultPlaceManager(eventBus, tokenizer, new GwtHistory());
     repository = new GClientRepository(async);
     views = new GwtViews();
+    widgets = new GwtWidgets();
   }
 
   @Override
@@ -66,6 +68,11 @@ public class AppRegistryInstance implements AppRegistry {
   @Override
   public AppViews getAppViews() {
     return views;
+  }
+
+  @Override
+  public AppWidgets getAppWidgets() {
+    return widgets;
   }
 
 }

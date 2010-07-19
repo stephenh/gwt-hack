@@ -17,6 +17,7 @@ public class TestRegistryInstance implements AppRegistry {
 
   private final StubEventBus bus = new StubEventBus();
   private final AppViews appViews = new StubViews();
+  private final AppWidgets widgets = new StubWidgets();
   private final Tokenizer tokenizer = new DefaultTokenizer();
   private final StubHistory history = new StubHistory();
   private final PlaceManager placeManager = new DefaultPlaceManager(bus, tokenizer, history);
@@ -51,6 +52,11 @@ public class TestRegistryInstance implements AppRegistry {
   @Override
   public StubOutstandingDispatchAsync getAsync() {
     return async;
+  }
+
+  @Override
+  public AppWidgets getAppWidgets() {
+    return widgets;
   }
 
 }

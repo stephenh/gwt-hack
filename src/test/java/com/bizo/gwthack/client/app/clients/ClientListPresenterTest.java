@@ -5,13 +5,13 @@ import static org.junit.Assert.assertThat;
 
 import java.util.ArrayList;
 
+import org.gwtmpv.widgets.StubCellTable;
 import org.junit.Test;
 
 import com.bizo.gwthack.client.app.AbstractPresenterTest;
 import com.bizo.gwthack.client.messages.GetClientsAction;
 import com.bizo.gwthack.client.messages.GetClientsResult;
 import com.bizo.gwthack.client.model.GClientModel;
-import com.bizo.gwthack.client.widgets.StubCellTable;
 import com.bizo.gwthack.shared.model.GClientDto;
 
 public class ClientListPresenterTest extends AbstractPresenterTest {

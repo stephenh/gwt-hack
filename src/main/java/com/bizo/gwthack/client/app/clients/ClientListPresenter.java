@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 import org.gwtmpv.model.properties.StringProperty;
 import org.gwtmpv.presenter.BasicPresenter;
+import org.gwtmpv.widgets.IsCellTable;
 
 import com.bizo.gwthack.client.AppRegistry;
 import com.bizo.gwthack.client.model.GClientModel;
 import com.bizo.gwthack.client.model.GClientModelBinding;
 import com.bizo.gwthack.client.model.GClientRepository;
-import com.bizo.gwthack.client.widgets.IsCellTable;
 import com.google.gwt.cell.client.AbstractCell;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 

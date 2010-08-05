@@ -1,7 +1,7 @@
 package com.bizo.gwthack.client;
 
-import com.bizo.gwthack.client.widgets.GwtCellTable;
-import com.bizo.gwthack.client.widgets.IsCellTable;
+import org.gwtmpv.widgets.GwtCellTable;
+import org.gwtmpv.widgets.IsCellTable;
 
 public class GwtWidgets implements AppWidgets {
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 1.6.4//EN" "http://google-web-toolkit.googlecode.com/svn/tags/1.6.4/distro-source/core/src/gwt-module.dtd">
-<module rename-to='gwthack'>
+<module rename-to="gwthack">
 
   <source path="client">
     <exclude name="**/Stub*" />
@@ -13,7 +13,7 @@
   <inherits name="org.gwtmpv.GwtMpv" />                    <!-- mvp model -->
   <inherits name="org.bindgen.Bindgen" />                  <!-- for Binding/AbstractBinding -->
 
-  <entry-point class='com.bizo.gwthack.client.GwtHackApp' />
+  <entry-point class="com.bizo.gwthack.client.GwtHackApp" />
 
   <set-configuration-property name="CssResource.style" value="pretty"/>
 </module>

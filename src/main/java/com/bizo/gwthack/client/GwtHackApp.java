@@ -26,9 +26,7 @@ public class GwtHackApp implements EntryPoint {
     places.registerPlace(new ClientPlace(registry, appPresenter));
     places.registerPlace(new ClientListPlace(registry, appPresenter));
     places.registerPlace(new EmployeeListPlace(registry, appPresenter));
-
-    if (!places.fireCurrentPlace()) {
-      appPresenter.revealDisplay();
-    }
+    places.fireCurrentOr(ClientListPlace.newRequest());
   }
+
 }

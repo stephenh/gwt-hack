@@ -3,6 +3,7 @@ package com.bizo.gwthack.client.presenters;
 import java.util.ArrayList;
 
 import org.gwtmpv.GenPlace;
+import org.gwtmpv.dispatch.client.SuccessCallback;
 import org.gwtmpv.model.Dto;
 import org.gwtmpv.model.Model;
 import org.gwtmpv.model.properties.StringProperty;
@@ -17,7 +18,6 @@ import com.bizo.gwthack.client.model.ClientModelBinding;
 import com.bizo.gwthack.client.views.IsClientListView;
 import com.google.gwt.cell.client.AbstractCell;
 import com.google.gwt.safehtml.shared.SafeHtmlBuilder;
-import com.google.gwt.user.client.rpc.AsyncCallback;
 
 public class ClientListPresenter extends AbstractPresenter<IsClientListView> {
 
@@ -61,15 +61,9 @@ public class ClientListPresenter extends AbstractPresenter<IsClientListView> {
     return models;
   }
 
-  private class OnClientsCallback implements AsyncCallback<GetClientsResult> {
+  private class OnClientsCallback implements SuccessCallback<GetClientsResult> {
     public void onSuccess(final GetClientsResult result) {
       table.setRowData(0, toModels(result.getClients()));
-      revealDisplay();
-    }
-
-    @Override
-    public void onFailure(final Throwable caught) {
-      caught.printStackTrace();
     }
   }
 

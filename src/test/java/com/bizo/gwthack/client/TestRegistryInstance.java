@@ -9,6 +9,9 @@ import org.gwtmpv.place.history.StubHistory;
 import org.gwtmpv.place.tokenizer.DefaultTokenizer;
 import org.gwtmpv.place.tokenizer.Tokenizer;
 
+import com.bizo.gwthack.client.AppRegistry;
+import com.bizo.gwthack.client.AppWidgets;
+import com.bizo.gwthack.client.StubWidgets;
 import com.bizo.gwthack.client.app.AppViews;
 import com.bizo.gwthack.client.app.StubViews;
 

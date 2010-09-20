@@ -1,4 +1,4 @@
-package com.bizo.gwthack.client.app;
+package com.bizo.gwthack.client.presenters;
 
 import org.gwtmpv.bus.StubEventBus;
 import org.gwtmpv.dispatch.client.util.StubOutstandingDispatchAsync;

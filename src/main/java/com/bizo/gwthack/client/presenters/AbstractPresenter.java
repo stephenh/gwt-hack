@@ -1,4 +1,4 @@
-package com.bizo.gwthack.client.app;
+package com.bizo.gwthack.client.presenters;
 
 import org.gwtmpv.dispatch.client.DispatchAsync;
 import org.gwtmpv.model.dsl.Binder;

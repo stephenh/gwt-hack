@@ -1,4 +1,4 @@
-package com.bizo.gwthack.client.app.client;
+package com.bizo.gwthack.client.presenters;
 
 import org.gwtmpv.GenPlace;
 import org.gwtmpv.model.properties.StringProperty;
@@ -6,8 +6,6 @@ import org.gwtmpv.model.values.DerivedValue;
 import org.gwtmpv.place.PlaceRequest;
 
 import com.bizo.gwthack.client.AppRegistry;
-import com.bizo.gwthack.client.app.AbstractPresenter;
-import com.bizo.gwthack.client.app.AppPresenter;
 import com.bizo.gwthack.client.messages.GetClientAction;
 import com.bizo.gwthack.client.messages.GetClientResult;
 import com.bizo.gwthack.client.model.GClientModel;

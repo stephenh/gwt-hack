@@ -1,4 +1,4 @@
-package com.bizo.gwthack.client.app;
+package com.bizo.gwthack.client.presenters;
 
 import org.gwtmpv.bus.EventBus;
 import org.gwtmpv.place.PlaceRequest;
@@ -7,8 +7,8 @@ import org.gwtmpv.presenter.Presenter;
 import org.gwtmpv.presenter.Slot;
 
 import com.bizo.gwthack.client.AppRegistry;
-import com.bizo.gwthack.client.app.clients.ClientListPlace;
-import com.bizo.gwthack.client.app.employees.EmployeeListPlace;
+import com.bizo.gwthack.client.presenters.ClientListPlace;
+import com.bizo.gwthack.client.presenters.EmployeeListPlace;
 import com.bizo.gwthack.client.views.IsAppView;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;

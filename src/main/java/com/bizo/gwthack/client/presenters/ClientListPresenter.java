@@ -1,4 +1,4 @@
-package com.bizo.gwthack.client.app.clients;
+package com.bizo.gwthack.client.presenters;
 
 import java.util.ArrayList;
 
@@ -10,8 +10,6 @@ import org.gwtmpv.widgets.IsCellTable;
 import org.gwtmpv.widgets.cellview.BoundColumn;
 
 import com.bizo.gwthack.client.AppRegistry;
-import com.bizo.gwthack.client.app.AbstractPresenter;
-import com.bizo.gwthack.client.app.AppPresenter;
 import com.bizo.gwthack.client.messages.GetClientsAction;
 import com.bizo.gwthack.client.messages.GetClientsResult;
 import com.bizo.gwthack.client.model.GClientModel;

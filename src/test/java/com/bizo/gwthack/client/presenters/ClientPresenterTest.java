@@ -1,4 +1,4 @@
-package com.bizo.gwthack.client.app.client;
+package com.bizo.gwthack.client.presenters;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -8,12 +8,12 @@ import java.util.ArrayList;
 import org.gwtmpv.place.events.PlaceRequestEvent;
 import org.junit.Test;
 
-import com.bizo.gwthack.client.app.AbstractPresenterTest;
 import com.bizo.gwthack.client.messages.GetClientAction;
 import com.bizo.gwthack.client.messages.GetClientResult;
 import com.bizo.gwthack.client.messages.SaveClientAction;
 import com.bizo.gwthack.client.messages.SaveClientResult;
 import com.bizo.gwthack.client.model.GClientModel;
+import com.bizo.gwthack.client.presenters.ClientPresenter;
 import com.bizo.gwthack.client.views.StubClientView;
 import com.bizo.gwthack.shared.model.GClientDto;
 

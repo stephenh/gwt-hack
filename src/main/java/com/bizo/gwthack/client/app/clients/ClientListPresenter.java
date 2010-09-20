@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.gwtmpv.model.properties.StringProperty;
 import org.gwtmpv.presenter.BasicPresenter;
 import org.gwtmpv.widgets.IsCellTable;
+import org.gwtmpv.widgets.cellview.BoundColumn;
 
 import com.bizo.gwthack.client.AppRegistry;
 import com.bizo.gwthack.client.model.GClientModel;
@@ -34,8 +35,8 @@ public class ClientListPresenter extends BasicPresenter<IsClientListView> {
 
     GClientModelBinding cb = new GClientModelBinding();
     table = registry.getAppWidgets().newCellTable();
-    table.addColumn(BoundColumn.of(cb.id(), new StringPropertyCell()));
-    table.addColumn(BoundColumn.of(cb.name(), new StringPropertyCell()));
+    table.addColumn(BoundColumn.ofStringProperty(cb.id()));
+    table.addColumn(BoundColumn.ofStringProperty(cb.name()));
     table.addColumn(BoundColumn.of(cb.id(), new AbstractCell<StringProperty>() {
       @Override
       public void render(StringProperty value, Object viewData, SafeHtmlBuilder sb) {
@@ -66,6 +67,7 @@ public class ClientListPresenter extends BasicPresenter<IsClientListView> {
     lastAsc = asc;
   }
 
+  // for testing
   IsCellTable<GClientModel> getTable() {
     return table;
   }

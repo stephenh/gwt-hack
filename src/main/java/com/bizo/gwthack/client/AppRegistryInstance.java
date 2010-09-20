@@ -2,9 +2,7 @@ package com.bizo.gwthack.client;
 
 import org.gwtmpv.bus.DefaultEventBus;
 import org.gwtmpv.bus.EventBus;
-import org.gwtmpv.dispatch.client.DefaultDispatchAsync;
-import org.gwtmpv.dispatch.client.DispatchAsync;
-import org.gwtmpv.dispatch.client.SessionIdAccessor;
+import org.gwtmpv.dispatch.client.util.OutstandingDispatchAsync;
 import org.gwtmpv.place.DefaultPlaceManager;
 import org.gwtmpv.place.PlaceManager;
 import org.gwtmpv.place.history.GwtHistory;
@@ -20,19 +18,14 @@ public class AppRegistryInstance implements AppRegistry {
 
   private final EventBus eventBus;
   private final PlaceManager placeManager;
-  private final DispatchAsync async;
+  private final OutstandingDispatchAsync async;
   private final Tokenizer tokenizer;
   private final AppViews views;
   private final Widgets widgets;
 
   public AppRegistryInstance() {
     eventBus = new DefaultEventBus();
-    async = new DefaultDispatchAsync(new SessionIdAccessor() {
-      @Override
-      public String getSessionId() {
-        return null;
-      }
-    });
+    async = new OutstandingDispatchAsync(eventBus);
     tokenizer = new DefaultTokenizer();
     placeManager = new DefaultPlaceManager(eventBus, tokenizer, new GwtHistory());
     views = new GwtViews();
@@ -40,7 +33,7 @@ public class AppRegistryInstance implements AppRegistry {
   }
 
   @Override
-  public DispatchAsync getAsync() {
+  public OutstandingDispatchAsync getAsync() {
     return async;
   }
 

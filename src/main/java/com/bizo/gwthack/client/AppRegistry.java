@@ -1,7 +1,7 @@
 package com.bizo.gwthack.client;
 
 import org.gwtmpv.bus.EventBus;
-import org.gwtmpv.dispatch.client.DispatchAsync;
+import org.gwtmpv.dispatch.client.util.OutstandingDispatchAsync;
 import org.gwtmpv.place.PlaceManager;
 import org.gwtmpv.place.tokenizer.Tokenizer;
 import org.gwtmpv.widgets.Widgets;
@@ -20,6 +20,6 @@ public interface AppRegistry {
 
   EventBus getEventBus();
 
-  DispatchAsync getAsync();
+  OutstandingDispatchAsync getAsync();
 
 }

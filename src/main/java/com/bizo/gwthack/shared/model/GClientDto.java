@@ -1,17 +1,15 @@
 package com.bizo.gwthack.shared.model;
 
-import java.io.Serializable;
-
 import org.bindgen.Bindable;
 import org.gwtmpv.model.Dto;
 
 import com.bizo.gwthack.client.model.GClientModel;
+import com.google.gwt.user.client.rpc.IsSerializable;
 
 /** DTO sent to/from server. */
 @Bindable
-public class GClientDto implements Serializable, Dto<GClientModel> {
+public class GClientDto implements IsSerializable, Dto<GClientModel> {
 
-  private static final long serialVersionUID = 1L;
   public String id;
   public String name;
 

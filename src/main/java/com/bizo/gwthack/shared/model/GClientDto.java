@@ -4,11 +4,10 @@ import org.bindgen.Bindable;
 import org.gwtmpv.model.Dto;
 
 import com.bizo.gwthack.client.model.GClientModel;
-import com.google.gwt.user.client.rpc.IsSerializable;
 
 /** DTO sent to/from server. */
 @Bindable
-public class GClientDto implements IsSerializable, Dto<GClientModel> {
+public class GClientDto implements Dto<GClientModel> {
 
   public String id;
   public String name;

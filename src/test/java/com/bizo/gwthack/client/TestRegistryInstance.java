@@ -8,10 +8,9 @@ import org.gwtmpv.place.PlaceManager;
 import org.gwtmpv.place.history.StubHistory;
 import org.gwtmpv.place.tokenizer.DefaultTokenizer;
 import org.gwtmpv.place.tokenizer.Tokenizer;
+import org.gwtmpv.widgets.StubWidgets;
+import org.gwtmpv.widgets.Widgets;
 
-import com.bizo.gwthack.client.AppRegistry;
-import com.bizo.gwthack.client.AppWidgets;
-import com.bizo.gwthack.client.StubWidgets;
 import com.bizo.gwthack.client.app.AppViews;
 import com.bizo.gwthack.client.app.StubViews;
 
@@ -19,7 +18,7 @@ public class TestRegistryInstance implements AppRegistry {
 
   private final StubEventBus bus = new StubEventBus();
   private final AppViews appViews = new StubViews();
-  private final AppWidgets widgets = new StubWidgets();
+  private final Widgets widgets = new StubWidgets();
   private final Tokenizer tokenizer = new DefaultTokenizer();
   private final StubHistory history = new StubHistory();
   private final PlaceManager placeManager = new DefaultPlaceManager(bus, tokenizer, history);
@@ -51,7 +50,7 @@ public class TestRegistryInstance implements AppRegistry {
   }
 
   @Override
-  public AppWidgets getAppWidgets() {
+  public Widgets getWidgets() {
     return widgets;
   }
 

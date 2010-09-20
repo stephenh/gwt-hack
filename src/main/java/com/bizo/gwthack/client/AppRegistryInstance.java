@@ -10,6 +10,8 @@ import org.gwtmpv.place.PlaceManager;
 import org.gwtmpv.place.history.GwtHistory;
 import org.gwtmpv.place.tokenizer.DefaultTokenizer;
 import org.gwtmpv.place.tokenizer.Tokenizer;
+import org.gwtmpv.widgets.GwtWidgets;
+import org.gwtmpv.widgets.Widgets;
 
 import com.bizo.gwthack.client.app.AppViews;
 import com.bizo.gwthack.client.app.GwtViews;
@@ -21,7 +23,7 @@ public class AppRegistryInstance implements AppRegistry {
   private final DispatchAsync async;
   private final Tokenizer tokenizer;
   private final AppViews views;
-  private final AppWidgets widgets;
+  private final Widgets widgets;
 
   public AppRegistryInstance() {
     eventBus = new DefaultEventBus();
@@ -63,7 +65,7 @@ public class AppRegistryInstance implements AppRegistry {
   }
 
   @Override
-  public AppWidgets getAppWidgets() {
+  public Widgets getWidgets() {
     return widgets;
   }
 

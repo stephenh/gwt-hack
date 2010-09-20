@@ -39,7 +39,7 @@ public class ClientListPresenter extends AbstractPresenter<IsClientListView> {
     super.onBind();
 
     GClientModelBinding cb = new GClientModelBinding();
-    table = registry.getAppWidgets().newCellTable();
+    table = registry.getWidgets().newCellTable();
     table.addColumn(BoundColumn.ofStringProperty(cb.id()));
     table.addColumn(BoundColumn.ofStringProperty(cb.name()));
     table.addColumn(BoundColumn.of(cb.id(), new AbstractCell<StringProperty>() {

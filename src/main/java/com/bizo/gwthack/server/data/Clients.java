@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.bizo.gwthack.shared.model.GClientDto;
 
+/** Fake server-side data store. */
 public class Clients {
 
   private static List<GClientDto> clients = new ArrayList<GClientDto>();

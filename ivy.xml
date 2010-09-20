@@ -14,12 +14,11 @@
     <dependency org="org.gwtmpv" name="gwt-mpv-user" rev="latest.integration" conf="default"/>
     <dependency org="org.gwtmpv" name="gwt-mpv-dev" rev="latest.integration" conf="default"/>
 
-    <dependency org="junit" name="junit" rev="4.8.1" conf="test"/>
-
     <!-- build time only dependencies -->
-    <dependency org="org.gwtmpv" name="gwt-mpv-apt" rev="1.8" conf="buildtime"/>
+    <dependency org="org.gwtmpv" name="gwt-mpv-apt" rev="1.9" conf="buildtime"/>
     <dependency org="javax.servlet" name="servlet-api" rev="2.5" conf="buildtime" />
 
     <!-- test time only dependencies -->
+    <dependency org="junit" name="junit" rev="4.8.1" conf="test"/>
   </dependencies>
 </ivy-module>

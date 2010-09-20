@@ -1,11 +1,9 @@
 package com.bizo.gwthack.client.presenters;
 
-import java.util.ArrayList;
+import static org.gwtmpv.model.Models.toModels;
 
 import org.gwtmpv.GenPlace;
 import org.gwtmpv.dispatch.client.SuccessCallback;
-import org.gwtmpv.model.Dto;
-import org.gwtmpv.model.Model;
 import org.gwtmpv.model.properties.StringProperty;
 import org.gwtmpv.widgets.IsCellTable;
 import org.gwtmpv.widgets.cellview.BoundColumn;
@@ -51,14 +49,6 @@ public class ClientListPresenter extends AbstractPresenter<IsClientListView> {
     view.clientsPanel().add(table);
 
     async.execute(new GetClientsAction(0, 10), new OnClientsCallback());
-  }
-
-  private static <M extends Model<D>, D extends Dto<M>> ArrayList<M> toModels(ArrayList<D> dtos) {
-    ArrayList<M> models = new ArrayList<M>();
-    for (D dto : dtos) {
-      models.add(dto.toModel());
-    }
-    return models;
   }
 
   private class OnClientsCallback implements SuccessCallback<GetClientsResult> {

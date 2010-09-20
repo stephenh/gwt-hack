@@ -14,12 +14,12 @@ import com.bizo.gwthack.client.messages.GetClientAction;
 import com.bizo.gwthack.client.messages.GetClientResult;
 import com.bizo.gwthack.client.messages.SaveClientAction;
 import com.bizo.gwthack.client.messages.SaveClientResult;
-import com.bizo.gwthack.client.model.GClientModel;
+import com.bizo.gwthack.client.model.ClientModel;
 import com.bizo.gwthack.client.views.IsClientView;
 
 public class ClientPresenter extends AbstractPresenter<IsClientView> {
 
-  private final GClientModel client;
+  private final ClientModel client;
   private final StringProperty nameLeft;
 
   @GenPlace(value = "client", async = false)
@@ -27,12 +27,12 @@ public class ClientPresenter extends AbstractPresenter<IsClientView> {
     final String id = request.getParameter("id", null);
     registry.getAsync().execute(new GetClientAction(id), new SuccessCallback<GetClientResult>() {
       public void onSuccess(GetClientResult result) {
-        app.show(new ClientPresenter(registry, new GClientModel(result.getClient())));
+        app.show(new ClientPresenter(registry, new ClientModel(result.getClient())));
       }
     });
   }
 
-  public ClientPresenter(final AppRegistry registry, final GClientModel client) {
+  public ClientPresenter(final AppRegistry registry, final ClientModel client) {
     super(registry.getAppViews().getClientView(), registry);
     this.client = client;
     nameLeft = makeNameLeft();

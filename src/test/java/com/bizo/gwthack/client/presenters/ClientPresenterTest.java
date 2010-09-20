@@ -12,15 +12,15 @@ import com.bizo.gwthack.client.messages.GetClientAction;
 import com.bizo.gwthack.client.messages.GetClientResult;
 import com.bizo.gwthack.client.messages.SaveClientAction;
 import com.bizo.gwthack.client.messages.SaveClientResult;
-import com.bizo.gwthack.client.model.GClientModel;
+import com.bizo.gwthack.client.model.ClientModel;
 import com.bizo.gwthack.client.presenters.ClientPresenter;
 import com.bizo.gwthack.client.views.StubClientView;
-import com.bizo.gwthack.shared.model.GClientDto;
+import com.bizo.gwthack.shared.model.ClientDto;
 
 public class ClientPresenterTest extends AbstractPresenterTest {
 
-  private final GClientDto dto = new GClientDto();
-  private final GClientModel client = new GClientModel(dto);
+  private final ClientDto dto = new ClientDto();
+  private final ClientModel client = new ClientModel(dto);
   private final ClientPresenter p = new ClientPresenter(registry, client);
   private final StubClientView v = (StubClientView) p.getView();
 

@@ -6,7 +6,7 @@ import org.gwtmpv.GenDispatch;
 import org.gwtmpv.In;
 import org.gwtmpv.Out;
 
-import com.bizo.gwthack.shared.model.GClientDto;
+import com.bizo.gwthack.shared.model.ClientDto;
 
 @GenDispatch
 public class GetClientsSpec {
@@ -15,5 +15,5 @@ public class GetClientsSpec {
   @In(2)
   Integer end;
   @Out(1)
-  ArrayList<GClientDto> clients;
+  ArrayList<ClientDto> clients;
 }

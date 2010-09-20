@@ -12,8 +12,8 @@ import org.gwtmpv.widgets.cellview.BoundColumn;
 import com.bizo.gwthack.client.AppRegistry;
 import com.bizo.gwthack.client.messages.GetClientsAction;
 import com.bizo.gwthack.client.messages.GetClientsResult;
-import com.bizo.gwthack.client.model.GClientModel;
-import com.bizo.gwthack.client.model.GClientModelBinding;
+import com.bizo.gwthack.client.model.ClientModel;
+import com.bizo.gwthack.client.model.ClientModelBinding;
 import com.bizo.gwthack.client.views.IsClientListView;
 import com.google.gwt.cell.client.AbstractCell;
 import com.google.gwt.safehtml.shared.SafeHtmlBuilder;
@@ -23,7 +23,7 @@ public class ClientListPresenter extends AbstractPresenter<IsClientListView> {
 
   private int lastColumn;
   private boolean lastAsc;
-  private IsCellTable<GClientModel> table;
+  private IsCellTable<ClientModel> table;
 
   @GenPlace(value = "clients", async = false)
   public static void show(final AppRegistry registry, final AppPresenter appPresenter) {
@@ -38,7 +38,7 @@ public class ClientListPresenter extends AbstractPresenter<IsClientListView> {
   protected void onBind() {
     super.onBind();
 
-    GClientModelBinding cb = new GClientModelBinding();
+    ClientModelBinding cb = new ClientModelBinding();
     table = registry.getWidgets().newCellTable();
     table.addColumn(BoundColumn.ofStringProperty(cb.id()));
     table.addColumn(BoundColumn.ofStringProperty(cb.name()));
@@ -81,7 +81,7 @@ public class ClientListPresenter extends AbstractPresenter<IsClientListView> {
   }
 
   // for testing
-  IsCellTable<GClientModel> getTable() {
+  IsCellTable<ClientModel> getTable() {
     return table;
   }
 }

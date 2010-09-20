@@ -3,19 +3,19 @@ package com.bizo.gwthack.server.data;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bizo.gwthack.shared.model.GClientDto;
+import com.bizo.gwthack.shared.model.ClientDto;
 
 /** Fake server-side data store. */
 public class Clients {
 
-  private static List<GClientDto> clients = new ArrayList<GClientDto>();
+  private static List<ClientDto> clients = new ArrayList<ClientDto>();
 
-  public static List<GClientDto> get() {
+  public static List<ClientDto> get() {
     return clients;
   }
 
-  public static GClientDto get(final String id) {
-    for (final GClientDto c : clients) {
+  public static ClientDto get(final String id) {
+    for (final ClientDto c : clients) {
       if (c.id.equals(id)) {
         return c;
       }
@@ -25,7 +25,7 @@ public class Clients {
 
   static {
     for (int i = 0; i < 15; i++) {
-      final GClientDto client = new GClientDto();
+      final ClientDto client = new ClientDto();
       client.id = String.valueOf(i);
       client.name = "Client " + i;
       clients.add(client);

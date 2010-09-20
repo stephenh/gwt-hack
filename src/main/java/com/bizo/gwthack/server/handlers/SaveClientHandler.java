@@ -5,13 +5,13 @@ import java.util.ArrayList;
 import com.bizo.gwthack.client.messages.SaveClientAction;
 import com.bizo.gwthack.client.messages.SaveClientResult;
 import com.bizo.gwthack.server.data.Clients;
-import com.bizo.gwthack.shared.model.GClientDto;
+import com.bizo.gwthack.shared.model.ClientDto;
 
 public class SaveClientHandler extends AbstractHandler<SaveClientAction, SaveClientResult> {
 
   @Override
   public SaveClientResult execute(final SaveClientAction action) {
-    final GClientDto ours = Clients.get(action.getClient().id);
+    final ClientDto ours = Clients.get(action.getClient().id);
     ours.name = action.getClient().name;
     return new SaveClientResult(new ArrayList<String>());
   }

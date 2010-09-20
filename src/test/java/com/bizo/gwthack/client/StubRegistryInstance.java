@@ -14,7 +14,7 @@ import org.gwtmpv.widgets.Widgets;
 import com.bizo.gwthack.client.app.AppViews;
 import com.bizo.gwthack.client.app.StubViews;
 
-public class TestRegistryInstance implements AppRegistry {
+public class StubRegistryInstance implements AppRegistry {
 
   private final StubEventBus bus = new StubEventBus();
   private final AppViews appViews = new StubViews();

@@ -20,7 +20,7 @@ import com.bizo.gwthack.shared.model.GClientDto;
 public class ClientPresenterTest extends AbstractPresenterTest {
 
   private final GClientDto dto = new GClientDto();
-  private final GClientModel client = new GClientModel(registry.getRepository(), dto);
+  private final GClientModel client = new GClientModel(dto);
   private final ClientPresenter p = new ClientPresenter(registry, client);
   private final StubClientView v = (StubClientView) p.getView();
 

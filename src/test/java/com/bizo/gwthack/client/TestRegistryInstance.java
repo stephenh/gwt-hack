@@ -11,7 +11,6 @@ import org.gwtmpv.place.tokenizer.Tokenizer;
 
 import com.bizo.gwthack.client.app.AppViews;
 import com.bizo.gwthack.client.app.StubViews;
-import com.bizo.gwthack.client.model.GClientRepository;
 
 public class TestRegistryInstance implements AppRegistry {
 
@@ -22,7 +21,6 @@ public class TestRegistryInstance implements AppRegistry {
   private final StubHistory history = new StubHistory();
   private final PlaceManager placeManager = new DefaultPlaceManager(bus, tokenizer, history);
   private final StubOutstandingDispatchAsync async = new StubOutstandingDispatchAsync(bus, new StubDispatchAsync());
-  private final GClientRepository repository = new GClientRepository(async);
 
   @Override
   public AppViews getAppViews() {
@@ -42,11 +40,6 @@ public class TestRegistryInstance implements AppRegistry {
   @Override
   public StubEventBus getEventBus() {
     return bus;
-  }
-
-  @Override
-  public GClientRepository getRepository() {
-    return repository;
   }
 
   @Override

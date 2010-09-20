@@ -13,13 +13,11 @@ import org.gwtmpv.place.tokenizer.Tokenizer;
 
 import com.bizo.gwthack.client.app.AppViews;
 import com.bizo.gwthack.client.app.GwtViews;
-import com.bizo.gwthack.client.model.GClientRepository;
 
 public class AppRegistryInstance implements AppRegistry {
 
   private final EventBus eventBus;
   private final PlaceManager placeManager;
-  private final GClientRepository repository;
   private final DispatchAsync async;
   private final Tokenizer tokenizer;
   private final AppViews views;
@@ -35,7 +33,6 @@ public class AppRegistryInstance implements AppRegistry {
     });
     tokenizer = new DefaultTokenizer();
     placeManager = new DefaultPlaceManager(eventBus, tokenizer, new GwtHistory());
-    repository = new GClientRepository(async);
     views = new GwtViews();
     widgets = new GwtWidgets();
   }
@@ -48,11 +45,6 @@ public class AppRegistryInstance implements AppRegistry {
   @Override
   public PlaceManager getPlaceManager() {
     return placeManager;
-  }
-
-  @Override
-  public GClientRepository getRepository() {
-    return repository;
   }
 
   @Override

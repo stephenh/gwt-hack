@@ -2,7 +2,6 @@ package com.bizo.gwthack.client.app;
 
 import org.gwtmpv.bus.EventBus;
 import org.gwtmpv.place.PlaceRequest;
-import org.gwtmpv.place.events.PlaceRequestEvent;
 import org.gwtmpv.presenter.BasicPresenter;
 import org.gwtmpv.presenter.Presenter;
 import org.gwtmpv.presenter.Slot;
@@ -27,8 +26,8 @@ public class AppPresenter extends BasicPresenter<IsAppView> {
   @Override
   public void onBind() {
     super.onBind();
-    registerHandler(register(eventBus, view.clientsAnchor(), ClientListPlace.request()));
-    registerHandler(register(eventBus, view.employeesAnchor(), EmployeeListPlace.request()));
+    registerHandler(register(eventBus, view.clientsAnchor(), ClientListPlace.newRequest()));
+    registerHandler(register(eventBus, view.employeesAnchor(), EmployeeListPlace.newRequest()));
   }
 
   public void show(final Presenter presenter) {
@@ -41,7 +40,7 @@ public class AppPresenter extends BasicPresenter<IsAppView> {
   private HandlerRegistration register(final EventBus eventBus, final HasClickHandlers link, final PlaceRequest request) {
     return link.addClickHandler(new ClickHandler() {
       public void onClick(final ClickEvent event) {
-        eventBus.fireEvent(new PlaceRequestEvent(request));
+        eventBus.fireEvent(request.asEvent());
       }
     });
   }

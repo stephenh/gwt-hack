@@ -2,32 +2,38 @@ package com.bizo.gwthack.client.app.clients;
 
 import java.util.ArrayList;
 
+import org.gwtmpv.GenPlace;
+import org.gwtmpv.model.Dto;
+import org.gwtmpv.model.Model;
 import org.gwtmpv.model.properties.StringProperty;
-import org.gwtmpv.presenter.BasicPresenter;
 import org.gwtmpv.widgets.IsCellTable;
 import org.gwtmpv.widgets.cellview.BoundColumn;
 
 import com.bizo.gwthack.client.AppRegistry;
+import com.bizo.gwthack.client.app.AbstractPresenter;
+import com.bizo.gwthack.client.app.AppPresenter;
+import com.bizo.gwthack.client.messages.GetClientsAction;
+import com.bizo.gwthack.client.messages.GetClientsResult;
 import com.bizo.gwthack.client.model.GClientModel;
 import com.bizo.gwthack.client.model.GClientModelBinding;
-import com.bizo.gwthack.client.model.GClientRepository;
 import com.bizo.gwthack.client.views.IsClientListView;
 import com.google.gwt.cell.client.AbstractCell;
 import com.google.gwt.safehtml.shared.SafeHtmlBuilder;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
-public class ClientListPresenter extends BasicPresenter<IsClientListView> {
+public class ClientListPresenter extends AbstractPresenter<IsClientListView> {
 
-  private final AppRegistry registry;
-  private final GClientRepository repository;
   private int lastColumn;
   private boolean lastAsc;
   private IsCellTable<GClientModel> table;
 
+  @GenPlace(value = "clients", async = false)
+  public static void show(final AppRegistry registry, final AppPresenter appPresenter) {
+    appPresenter.show(new ClientListPresenter(registry));
+  }
+
   public ClientListPresenter(final AppRegistry registry) {
-    super(registry.getAppViews().getClientListView(), registry.getEventBus());
-    this.registry = registry;
-    repository = registry.getRepository();
+    super(registry.getAppViews().getClientListView(), registry);
   }
 
   @Override
@@ -46,12 +52,20 @@ public class ClientListPresenter extends BasicPresenter<IsClientListView> {
     }));
     view.clientsPanel().add(table);
 
-    repository.getClients(0, 10, new OnClientsCallback());
+    async.execute(new GetClientsAction(0, 10), new OnClientsCallback());
   }
 
-  private class OnClientsCallback implements AsyncCallback<ArrayList<GClientModel>> {
-    public void onSuccess(final ArrayList<GClientModel> clients) {
-      table.setRowData(0, clients);
+  private static <M extends Model<D>, D extends Dto<M>> ArrayList<M> toModels(ArrayList<D> dtos) {
+    ArrayList<M> models = new ArrayList<M>();
+    for (D dto : dtos) {
+      models.add(dto.toModel());
+    }
+    return models;
+  }
+
+  private class OnClientsCallback implements AsyncCallback<GetClientsResult> {
+    public void onSuccess(final GetClientsResult result) {
+      table.setRowData(0, toModels(result.getClients()));
       revealDisplay();
     }
 

@@ -11,6 +11,7 @@ import com.bizo.gwthack.client.model.GClientModel;
 import com.bizo.gwthack.client.model.GClientModelBinding;
 import com.bizo.gwthack.client.model.GClientRepository;
 import com.google.gwt.cell.client.AbstractCell;
+import com.google.gwt.safehtml.shared.SafeHtmlBuilder;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
 public class ClientListPresenter extends BasicPresenter<IsClientListView> {
@@ -37,8 +38,8 @@ public class ClientListPresenter extends BasicPresenter<IsClientListView> {
     table.addColumn(BoundColumn.of(cb.name(), new StringPropertyCell()));
     table.addColumn(BoundColumn.of(cb.id(), new AbstractCell<StringProperty>() {
       @Override
-      public void render(StringProperty value, Object viewData, StringBuilder sb) {
-        sb.append("<a href=\"#client;id=" + value.get() + "\">view</a>");
+      public void render(StringProperty value, Object viewData, SafeHtmlBuilder sb) {
+        sb.appendHtmlConstant("<a href=\"#client;id=" + value.get() + "\">view</a>");
       }
     }));
     view.clientsPanel().add(table);
@@ -48,7 +49,7 @@ public class ClientListPresenter extends BasicPresenter<IsClientListView> {
 
   private class OnClientsCallback implements AsyncCallback<ArrayList<GClientModel>> {
     public void onSuccess(final ArrayList<GClientModel> clients) {
-      table.setData(0, clients.size(), clients);
+      table.setRowData(0, clients);
       revealDisplay();
     }
 

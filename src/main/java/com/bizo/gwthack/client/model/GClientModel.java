@@ -49,7 +49,7 @@ public class GClientModel extends AbstractModel<GClientDto> {
   }
 
   /** Called by the {@link GClientRepository}. */
-  GClientDto getDto() {
+  public GClientDto getDto() {
     return b.get();
   }
 

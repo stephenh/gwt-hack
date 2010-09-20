@@ -11,6 +11,7 @@ import com.bizo.gwthack.client.AppRegistry;
 import com.bizo.gwthack.client.model.GClientModel;
 import com.bizo.gwthack.client.model.GClientModelBinding;
 import com.bizo.gwthack.client.model.GClientRepository;
+import com.bizo.gwthack.client.views.IsClientListView;
 import com.google.gwt.cell.client.AbstractCell;
 import com.google.gwt.safehtml.shared.SafeHtmlBuilder;
 import com.google.gwt.user.client.rpc.AsyncCallback;

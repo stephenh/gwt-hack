@@ -14,6 +14,7 @@ import com.bizo.gwthack.client.messages.GetClientResult;
 import com.bizo.gwthack.client.messages.SaveClientAction;
 import com.bizo.gwthack.client.messages.SaveClientResult;
 import com.bizo.gwthack.client.model.GClientModel;
+import com.bizo.gwthack.client.views.StubClientView;
 import com.bizo.gwthack.shared.model.GClientDto;
 
 public class ClientPresenterTest extends AbstractPresenterTest {

@@ -10,6 +10,7 @@ import org.gwtmpv.presenter.Slot;
 import com.bizo.gwthack.client.AppRegistry;
 import com.bizo.gwthack.client.app.clients.ClientListPlace;
 import com.bizo.gwthack.client.app.employees.EmployeeListPlace;
+import com.bizo.gwthack.client.views.IsAppView;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.HasClickHandlers;

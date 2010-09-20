@@ -12,6 +12,7 @@ import com.bizo.gwthack.client.app.AbstractPresenterTest;
 import com.bizo.gwthack.client.messages.GetClientsAction;
 import com.bizo.gwthack.client.messages.GetClientsResult;
 import com.bizo.gwthack.client.model.GClientModel;
+import com.bizo.gwthack.client.views.StubClientListView;
 import com.bizo.gwthack.shared.model.GClientDto;
 
 public class ClientListPresenterTest extends AbstractPresenterTest {

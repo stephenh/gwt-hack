@@ -8,6 +8,7 @@ import com.bizo.gwthack.client.AppRegistry;
 import com.bizo.gwthack.client.app.AbstractPresenter;
 import com.bizo.gwthack.client.app.clients.ClientListPlace;
 import com.bizo.gwthack.client.model.GClientModel;
+import com.bizo.gwthack.client.views.IsClientView;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
 public class ClientPresenter extends AbstractPresenter<IsClientView> {

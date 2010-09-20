@@ -1,6 +1,7 @@
 package com.bizo.gwthack.client.app;
 
 import org.gwtmpv.dispatch.client.DispatchAsync;
+import org.gwtmpv.model.dsl.Binder;
 import org.gwtmpv.presenter.BasicPresenter;
 import org.gwtmpv.widgets.IsWidget;
 
@@ -12,6 +13,7 @@ public abstract class AbstractPresenter<D extends IsWidget> extends BasicPresent
   protected final AppRegistry registry;
   protected final DispatchAsync async;
   protected final GClientRepository repository;
+  protected final Binder binder = new Binder(this);
 
   public AbstractPresenter(final D display, final AppRegistry registry) {
     super(display, registry.getEventBus());

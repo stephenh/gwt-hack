@@ -1,19 +1,16 @@
 package com.bizo.gwthack.client.presenters;
 
+import static org.gwtmpv.testing.MpvMatchers.hasPlaceRequests;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 import java.util.ArrayList;
 
-import org.gwtmpv.place.events.PlaceRequestEvent;
 import org.junit.Test;
 
-import com.bizo.gwthack.client.messages.GetClientAction;
-import com.bizo.gwthack.client.messages.GetClientResult;
 import com.bizo.gwthack.client.messages.SaveClientAction;
 import com.bizo.gwthack.client.messages.SaveClientResult;
 import com.bizo.gwthack.client.model.ClientModel;
-import com.bizo.gwthack.client.presenters.ClientPresenter;
 import com.bizo.gwthack.client.views.StubClientView;
 import com.bizo.gwthack.shared.model.ClientDto;
 
@@ -50,15 +47,11 @@ public class ClientPresenterTest extends AbstractPresenterTest {
     v.name.type("bar");
     v.submit.click();
 
-    // this should have been needed for the other tests too...
-    async.getCallback(GetClientAction.class).onSuccess(new GetClientResult(dto));
-
     // save on the server is successful
     assertThat(async.getAction(SaveClientAction.class).getClient().name, is("bar"));
     async.getCallback(SaveClientAction.class).onSuccess(new SaveClientResult(new ArrayList<String>()));
 
-    assertThat(bus.getEvents(PlaceRequestEvent.class).size(), is(1));
-    assertThat(bus.getEvent(PlaceRequestEvent.class, 0).getRequest().getName(), is("clients"));
+    assertThat(bus, hasPlaceRequests("clients"));
   }
 
 }

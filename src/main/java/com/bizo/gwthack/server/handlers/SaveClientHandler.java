@@ -13,7 +13,7 @@ public class SaveClientHandler extends AbstractHandler<SaveClientAction, SaveCli
   public SaveClientResult execute(final SaveClientAction action) {
     final ClientDto ours = Clients.get(action.getClient().id);
     ours.name = action.getClient().name;
-    return new SaveClientResult(new ArrayList<String>());
+    return new SaveClientResult(true, new ArrayList<String>());
   }
 
   @Override

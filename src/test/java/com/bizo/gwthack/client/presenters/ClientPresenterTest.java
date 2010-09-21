@@ -5,6 +5,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import org.junit.Test;
 
@@ -49,9 +50,14 @@ public class ClientPresenterTest extends AbstractPresenterTest {
 
     // save on the server is successful
     assertThat(async.getAction(SaveClientAction.class).getClient().name, is("bar"));
-    async.getCallback(SaveClientAction.class).onSuccess(new SaveClientResult(new ArrayList<String>()));
 
+    doSaveClientResult(true);
     assertThat(bus, hasPlaceRequests("clients"));
+  }
+
+  private void doSaveClientResult(boolean success, String... messages) {
+    async.getCallback(SaveClientAction.class).onSuccess(//
+      new SaveClientResult(success, new ArrayList<String>(Arrays.asList(messages))));
   }
 
 }

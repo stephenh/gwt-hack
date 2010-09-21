@@ -13,6 +13,7 @@ public class SaveClientSpec {
   @In(1)
   ClientDto client;
   @Out(1)
-  // somehow drop into the Repository/UoW?
+  boolean success;
+  @Out(2)
   ArrayList<String> messages;
 }

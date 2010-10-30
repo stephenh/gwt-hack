@@ -20,12 +20,12 @@ public class ClientPresenterTest extends AbstractPresenterTest {
   private final ClientDto dto = new ClientDto();
   private final ClientModel client = new ClientModel(dto);
   private final ClientPresenter p = new ClientPresenter(registry, client);
-  private final StubClientView v = (StubClientView) p.getView();
+  private StubClientView v;
 
   @Test
   public void fillsInFieldsOnBind() {
     dto.name = "foo";
-    p.bind();
+    bind();
     assertThat(v.name.getText(), is("foo"));
     assertThat(v.nameLeft.getText(), is("47 left"));
   }
@@ -33,7 +33,7 @@ public class ClientPresenterTest extends AbstractPresenterTest {
   @Test
   public void keyUpChangesNameLeft() {
     dto.name = "foo";
-    p.bind();
+    bind();
     assertThat(v.name.getText(), is("foo"));
     assertThat(v.nameLeft.getText(), is("47 left"));
 
@@ -44,7 +44,7 @@ public class ClientPresenterTest extends AbstractPresenterTest {
   @Test
   public void saving() {
     dto.name = "foo";
-    p.bind();
+    bind();
     v.name.type("bar");
     v.submit.click();
 
@@ -53,6 +53,11 @@ public class ClientPresenterTest extends AbstractPresenterTest {
 
     doSaveClientResult(true);
     assertThat(bus, hasPlaceRequests("clients"));
+  }
+
+  private void bind() {
+    p.bind();
+    v = (StubClientView) p.getView();
   }
 
   private void doSaveClientResult(boolean success, String... messages) {

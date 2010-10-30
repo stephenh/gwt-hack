@@ -1,26 +1,23 @@
 package com.bizo.gwthack.client.presenters;
 
-import org.gwtmpv.bus.EventBus;
 import org.gwtmpv.place.PlaceRequest;
-import org.gwtmpv.presenter.BasicPresenter;
 import org.gwtmpv.presenter.Presenter;
 import org.gwtmpv.presenter.Slot;
 
 import com.bizo.gwthack.client.AppRegistry;
-import com.bizo.gwthack.client.presenters.ClientListPlace;
-import com.bizo.gwthack.client.presenters.EmployeeListPlace;
 import com.bizo.gwthack.client.views.IsAppView;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.HasClickHandlers;
+import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.HandlerRegistration;
 
-public class AppPresenter extends BasicPresenter<IsAppView> {
+public class AppPresenter extends AbstractPresenter<IsAppView> {
 
   private final Slot<Presenter> current = new Slot<Presenter>(this);
 
   public AppPresenter(final AppRegistry registry) {
-    super(registry.getAppViews().getAppView(), registry.getEventBus());
+    super(registry.getAppViews().getAppView(), registry);
   }
 
   @Override

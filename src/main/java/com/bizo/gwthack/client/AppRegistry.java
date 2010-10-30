@@ -1,16 +1,13 @@
 package com.bizo.gwthack.client;
 
-import org.gwtmpv.bus.EventBus;
 import org.gwtmpv.dispatch.client.util.OutstandingDispatchAsync;
 import org.gwtmpv.place.PlaceManager;
 import org.gwtmpv.place.tokenizer.Tokenizer;
-import org.gwtmpv.widgets.Widgets;
 
 import com.bizo.gwthack.client.app.AppViews;
+import com.google.gwt.event.shared.EventBus;
 
 public interface AppRegistry {
-
-  Widgets getWidgets();
 
   AppViews getAppViews();
 

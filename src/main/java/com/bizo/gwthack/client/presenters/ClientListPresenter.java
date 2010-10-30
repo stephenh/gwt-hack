@@ -1,6 +1,7 @@
 package com.bizo.gwthack.client.presenters;
 
 import static org.gwtmpv.model.Models.toModels;
+import static org.gwtmpv.widgets.Widgets.newCellTable;
 
 import org.gwtmpv.GenPlace;
 import org.gwtmpv.dispatch.client.SuccessCallback;
@@ -37,7 +38,7 @@ public class ClientListPresenter extends AbstractPresenter<IsClientListView> {
     super.onBind();
 
     ClientModelBinding cb = new ClientModelBinding();
-    table = registry.getWidgets().newCellTable();
+    table = newCellTable();
     table.addColumn(BoundColumn.ofStringProperty(cb.id()));
     table.addColumn(BoundColumn.ofStringProperty(cb.name()));
     table.addColumn(BoundColumn.of(cb.id(), new AbstractCell<StringProperty>() {

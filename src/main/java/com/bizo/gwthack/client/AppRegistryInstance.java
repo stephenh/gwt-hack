@@ -1,18 +1,16 @@
 package com.bizo.gwthack.client;
 
-import org.gwtmpv.bus.DefaultEventBus;
-import org.gwtmpv.bus.EventBus;
 import org.gwtmpv.dispatch.client.util.OutstandingDispatchAsync;
 import org.gwtmpv.place.DefaultPlaceManager;
 import org.gwtmpv.place.PlaceManager;
 import org.gwtmpv.place.history.GwtHistory;
 import org.gwtmpv.place.tokenizer.DefaultTokenizer;
 import org.gwtmpv.place.tokenizer.Tokenizer;
-import org.gwtmpv.widgets.GwtWidgets;
-import org.gwtmpv.widgets.Widgets;
 
 import com.bizo.gwthack.client.app.AppViews;
 import com.bizo.gwthack.client.app.GwtViews;
+import com.google.gwt.event.shared.EventBus;
+import com.google.gwt.event.shared.SimpleEventBus;
 
 public class AppRegistryInstance implements AppRegistry {
 
@@ -21,15 +19,13 @@ public class AppRegistryInstance implements AppRegistry {
   private final OutstandingDispatchAsync async;
   private final Tokenizer tokenizer;
   private final AppViews views;
-  private final Widgets widgets;
 
   public AppRegistryInstance() {
-    eventBus = new DefaultEventBus();
+    eventBus = new SimpleEventBus();
     async = new OutstandingDispatchAsync(eventBus);
     tokenizer = new DefaultTokenizer();
     placeManager = new DefaultPlaceManager(eventBus, tokenizer, new GwtHistory());
     views = new GwtViews();
-    widgets = new GwtWidgets();
   }
 
   @Override
@@ -55,11 +51,6 @@ public class AppRegistryInstance implements AppRegistry {
   @Override
   public AppViews getAppViews() {
     return views;
-  }
-
-  @Override
-  public Widgets getWidgets() {
-    return widgets;
   }
 
 }

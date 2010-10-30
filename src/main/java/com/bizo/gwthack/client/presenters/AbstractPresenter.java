@@ -7,17 +7,20 @@ import org.gwtmpv.presenter.BasicPresenter;
 import org.gwtmpv.widgets.IsWidget;
 
 import com.bizo.gwthack.client.AppRegistry;
+import com.google.gwt.event.shared.EventBus;
 
 public abstract class AbstractPresenter<D extends IsWidget> extends BasicPresenter<D> {
 
   protected final AppRegistry registry;
   protected final OutstandingDispatchAsync async;
   protected final Binder binder = new Binder(this);
+  protected final EventBus eventBus;
 
   public AbstractPresenter(final D display, final AppRegistry registry) {
-    super(display, registry.getEventBus());
+    super(display);
     this.registry = registry;
     async = registry.getAsync();
+    eventBus = registry.getEventBus();
   }
 
   protected void goTo(PlaceRequest request) {

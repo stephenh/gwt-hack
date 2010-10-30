@@ -11,13 +11,12 @@ import org.junit.Test;
 import com.bizo.gwthack.client.messages.GetClientsAction;
 import com.bizo.gwthack.client.messages.GetClientsResult;
 import com.bizo.gwthack.client.model.ClientModel;
-import com.bizo.gwthack.client.presenters.ClientListPresenter;
 import com.bizo.gwthack.client.views.StubClientListView;
 import com.bizo.gwthack.shared.model.ClientDto;
 
 public class ClientListPresenterTest extends AbstractPresenterTest {
 
-  private final ClientListPresenter p = new ClientListPresenter(registry);
+  private final ClientListPresenter p = bind(new ClientListPresenter(registry));
   private final StubClientListView v = (StubClientListView) p.getView();
 
   @Test

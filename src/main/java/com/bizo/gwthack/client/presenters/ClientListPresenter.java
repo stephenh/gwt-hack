@@ -30,7 +30,7 @@ public class ClientListPresenter extends AbstractPresenter<IsClientListView> {
   }
 
   public ClientListPresenter(final AppRegistry registry) {
-    super(registry.getAppViews().getClientListView(), registry);
+    super(registry.getAppViews().newClientListView(), registry);
   }
 
   @Override

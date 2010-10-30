@@ -9,9 +9,6 @@ import org.gwtmpv.place.history.StubHistory;
 import org.gwtmpv.place.tokenizer.DefaultTokenizer;
 import org.gwtmpv.place.tokenizer.Tokenizer;
 
-import com.bizo.gwthack.client.app.AppViews;
-import com.bizo.gwthack.client.app.StubViews;
-
 public class StubRegistryInstance implements AppRegistry {
 
   private final StubEventBus bus = new StubEventBus();

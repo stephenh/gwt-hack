@@ -33,7 +33,7 @@ public class ClientPresenter extends AbstractPresenter<IsClientView> {
   }
 
   public ClientPresenter(final AppRegistry registry, final ClientModel client) {
-    super(registry.getAppViews().getClientView(), registry);
+    super(registry.getAppViews().newClientView(), registry);
     this.client = client;
     nameLeft = makeNameLeft();
   }

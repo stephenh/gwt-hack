@@ -17,7 +17,7 @@ public class AppPresenter extends AbstractPresenter<IsAppView> {
   private final Slot<Presenter> current = new Slot<Presenter>(this);
 
   public AppPresenter(final AppRegistry registry) {
-    super(registry.getAppViews().getAppView(), registry);
+    super(registry.getAppViews().newAppView(), registry);
   }
 
   @Override

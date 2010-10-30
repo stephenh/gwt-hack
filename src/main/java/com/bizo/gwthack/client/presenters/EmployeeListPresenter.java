@@ -13,7 +13,7 @@ public class EmployeeListPresenter extends AbstractPresenter<IsEmployeeListView>
   }
 
   public EmployeeListPresenter(final AppRegistry registry) {
-    super(registry.getAppViews().getEmployeeListView(), registry);
+    super(registry.getAppViews().newEmployeeListView(), registry);
   }
 
 }

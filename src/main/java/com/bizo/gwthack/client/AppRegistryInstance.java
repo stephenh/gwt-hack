@@ -7,8 +7,6 @@ import org.gwtmpv.place.history.GwtHistory;
 import org.gwtmpv.place.tokenizer.DefaultTokenizer;
 import org.gwtmpv.place.tokenizer.Tokenizer;
 
-import com.bizo.gwthack.client.app.AppViews;
-import com.bizo.gwthack.client.app.GwtViews;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.SimpleEventBus;
 

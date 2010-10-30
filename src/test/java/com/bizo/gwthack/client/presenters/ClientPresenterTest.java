@@ -9,10 +9,10 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-import com.bizo.gwthack.client.messages.SaveClientAction;
-import com.bizo.gwthack.client.messages.SaveClientResult;
 import com.bizo.gwthack.client.model.ClientModel;
 import com.bizo.gwthack.client.views.StubClientView;
+import com.bizo.gwthack.shared.messages.SaveClientAction;
+import com.bizo.gwthack.shared.messages.SaveClientResult;
 import com.bizo.gwthack.shared.model.ClientDto;
 
 public class ClientPresenterTest extends AbstractPresenterTest {

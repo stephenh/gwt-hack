@@ -10,12 +10,12 @@ import org.gwtmpv.model.values.DerivedValue;
 import org.gwtmpv.place.PlaceRequest;
 
 import com.bizo.gwthack.client.AppRegistry;
-import com.bizo.gwthack.client.messages.GetClientAction;
-import com.bizo.gwthack.client.messages.GetClientResult;
-import com.bizo.gwthack.client.messages.SaveClientAction;
-import com.bizo.gwthack.client.messages.SaveClientResult;
 import com.bizo.gwthack.client.model.ClientModel;
 import com.bizo.gwthack.client.views.IsClientView;
+import com.bizo.gwthack.shared.messages.GetClientAction;
+import com.bizo.gwthack.shared.messages.GetClientResult;
+import com.bizo.gwthack.shared.messages.SaveClientAction;
+import com.bizo.gwthack.shared.messages.SaveClientResult;
 
 public class ClientPresenter extends AbstractPresenter<IsClientView> {
 

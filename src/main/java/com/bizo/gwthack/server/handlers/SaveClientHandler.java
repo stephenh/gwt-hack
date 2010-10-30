@@ -2,9 +2,9 @@ package com.bizo.gwthack.server.handlers;
 
 import java.util.ArrayList;
 
-import com.bizo.gwthack.client.messages.SaveClientAction;
-import com.bizo.gwthack.client.messages.SaveClientResult;
 import com.bizo.gwthack.server.data.Clients;
+import com.bizo.gwthack.shared.messages.SaveClientAction;
+import com.bizo.gwthack.shared.messages.SaveClientResult;
 import com.bizo.gwthack.shared.model.ClientDto;
 
 public class SaveClientHandler extends AbstractHandler<SaveClientAction, SaveClientResult> {

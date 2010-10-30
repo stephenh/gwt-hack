@@ -8,10 +8,10 @@ import java.util.ArrayList;
 import org.gwtmpv.widgets.StubCellTable;
 import org.junit.Test;
 
-import com.bizo.gwthack.client.messages.GetClientsAction;
-import com.bizo.gwthack.client.messages.GetClientsResult;
 import com.bizo.gwthack.client.model.ClientModel;
 import com.bizo.gwthack.client.views.StubClientListView;
+import com.bizo.gwthack.shared.messages.GetClientsAction;
+import com.bizo.gwthack.shared.messages.GetClientsResult;
 import com.bizo.gwthack.shared.model.ClientDto;
 
 public class ClientListPresenterTest extends AbstractPresenterTest {

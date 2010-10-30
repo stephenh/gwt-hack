@@ -10,11 +10,11 @@ import org.gwtmpv.widgets.IsCellTable;
 import org.gwtmpv.widgets.cellview.BoundColumn;
 
 import com.bizo.gwthack.client.AppRegistry;
-import com.bizo.gwthack.client.messages.GetClientsAction;
-import com.bizo.gwthack.client.messages.GetClientsResult;
 import com.bizo.gwthack.client.model.ClientModel;
 import com.bizo.gwthack.client.model.ClientModelBinding;
 import com.bizo.gwthack.client.views.IsClientListView;
+import com.bizo.gwthack.shared.messages.GetClientsAction;
+import com.bizo.gwthack.shared.messages.GetClientsResult;
 import com.google.gwt.cell.client.AbstractCell;
 import com.google.gwt.safehtml.shared.SafeHtmlBuilder;
 

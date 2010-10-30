@@ -1,4 +1,4 @@
-package com.bizo.gwthack.client.messages;
+package com.bizo.gwthack.shared.messages;
 
 import java.util.ArrayList;
 

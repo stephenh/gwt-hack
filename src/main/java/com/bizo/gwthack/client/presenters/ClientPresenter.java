@@ -4,9 +4,8 @@ import org.gwtmpv.GenPlace;
 import org.gwtmpv.dispatch.client.SuccessCallback;
 import org.gwtmpv.model.commands.DispatchUiCommand;
 import org.gwtmpv.model.commands.UiCommand;
-import org.gwtmpv.model.properties.IntegerProperty;
-import org.gwtmpv.model.properties.StringProperty;
-import org.gwtmpv.model.values.DerivedValue;
+import org.gwtmpv.model.properties.AbstractPropertyFormatter;
+import org.gwtmpv.model.properties.Property;
 import org.gwtmpv.place.PlaceRequest;
 
 import com.bizo.gwthack.client.AppRegistry;
@@ -20,7 +19,6 @@ import com.bizo.gwthack.shared.messages.SaveClientResult;
 public class ClientPresenter extends AbstractPresenter<IsClientView> {
 
   private final ClientModel client;
-  private final StringProperty nameLeft;
 
   @GenPlace(value = "client", async = false)
   public static void show(final AppRegistry registry, final AppPresenter app, PlaceRequest request) {
@@ -35,14 +33,13 @@ public class ClientPresenter extends AbstractPresenter<IsClientView> {
   public ClientPresenter(final AppRegistry registry, final ClientModel client) {
     super(registry.getAppViews().newClientView(), registry);
     this.client = client;
-    nameLeft = makeNameLeft();
   }
 
   @Override
   protected void onBind() {
     super.onBind();
     binder.bind(client.name).to(view.name());
-    binder.bind(nameLeft).toTextOf(view.nameLeft());
+    binder.bind(makeNameLeft()).toTextOf(view.nameLeft());
     binder.bind(saveCommand).to(view.submit());
     binder.enhance(view.name());
   }
@@ -59,13 +56,12 @@ public class ClientPresenter extends AbstractPresenter<IsClientView> {
   };
 
   /** @return a new property that says "X left" and updates when name changes. */
-  private StringProperty makeNameLeft() {
-    final IntegerProperty remaining = client.name.remaining();
-    return new StringProperty(new DerivedValue<String>() {
-      public String get() {
-        return remaining.get() + " left";
+  private Property<String> makeNameLeft() {
+    return client.name.remaining().formatted(new AbstractPropertyFormatter<Integer, String>() {
+      public String format(Integer a) {
+        return a + " left";
       }
-    }).depends(remaining);
+    });
   }
 
 }

@@ -2,7 +2,6 @@ package com.bizo.gwthack.client.presenters;
 
 import org.gwtmpv.GenPlace;
 import org.gwtmpv.dispatch.client.SuccessCallback;
-import org.gwtmpv.model.commands.DispatchUiCommand;
 import org.gwtmpv.model.commands.UiCommand;
 import org.gwtmpv.model.properties.AbstractPropertyFormatter;
 import org.gwtmpv.model.properties.Property;
@@ -14,6 +13,7 @@ import com.bizo.gwthack.client.views.IsClientView;
 import com.bizo.gwthack.shared.messages.GetClientAction;
 import com.bizo.gwthack.shared.messages.GetClientResult;
 import com.bizo.gwthack.shared.messages.SaveClientAction;
+import com.bizo.gwthack.shared.messages.SaveClientCommand;
 import com.bizo.gwthack.shared.messages.SaveClientResult;
 
 public class ClientPresenter extends AbstractPresenter<IsClientView> {
@@ -45,7 +45,7 @@ public class ClientPresenter extends AbstractPresenter<IsClientView> {
   }
 
   /** Saves the client and returns to the client list. */
-  private final UiCommand saveCommand = new DispatchUiCommand<SaveClientAction, SaveClientResult>(async) {
+  private final UiCommand saveCommand = new SaveClientCommand(async) {
     protected SaveClientAction createAction() {
       return new SaveClientAction(client.getDto());
     }

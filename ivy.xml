@@ -7,15 +7,15 @@
     <conf name="test" visibility="private"/>
   </configurations>
   <dependencies defaultconfmapping="%->default,sources()">
-    <dependency org="com.google.gwt" name="gwt-user" rev="2.1.0.r8739" conf="default"/>
-    <dependency org="com.google.gwt" name="gwt-dev" rev="2.1.0.r8739" conf="default"/>
-    <dependency org="com.google.gwt" name="gwt-servlet" rev="2.1.0.r8739" conf="default"/>
+    <dependency org="com.google.gwt" name="gwt-user" rev="2.1.0.r8929b" conf="default"/>
+    <dependency org="com.google.gwt" name="gwt-dev" rev="2.1.0.r8929b" conf="default"/>
+    <dependency org="com.google.gwt" name="gwt-servlet" rev="2.1.0.r8929b" conf="default"/>
 
     <dependency org="org.gwtmpv" name="gwt-mpv-user" rev="latest.integration" conf="default"/>
     <dependency org="org.gwtmpv" name="gwt-mpv-dev" rev="latest.integration" conf="default"/>
 
     <!-- build time only dependencies -->
-    <dependency org="org.gwtmpv" name="gwt-mpv-apt" rev="1.9" conf="buildtime"/>
+    <dependency org="org.gwtmpv" name="gwt-mpv-apt" rev="1.11" conf="buildtime"/>
     <dependency org="javax.servlet" name="servlet-api" rev="2.5" conf="buildtime" />
 
     <!-- test time only dependencies -->

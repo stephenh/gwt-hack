@@ -4,6 +4,7 @@ import org.gwtmpv.bus.StubEventBus;
 import org.gwtmpv.dispatch.client.util.StubOutstandingDispatchAsync;
 import org.gwtmpv.presenter.Presenter;
 import org.gwtmpv.widgets.StubWidgetsProvider;
+import org.gwtmpv.widgets.cellview.StubCellsProvider;
 
 import com.bizo.gwthack.client.StubRegistryInstance;
 
@@ -11,6 +12,7 @@ public class AbstractPresenterTest {
 
   static {
     StubWidgetsProvider.install();
+    StubCellsProvider.install();
   }
 
   protected final StubRegistryInstance registry = new StubRegistryInstance();

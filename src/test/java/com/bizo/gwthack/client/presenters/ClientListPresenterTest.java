@@ -16,8 +16,9 @@ import com.bizo.gwthack.shared.model.ClientDto;
 
 public class ClientListPresenterTest extends AbstractPresenterTest {
 
-  private final ClientListPresenter p = bind(new ClientListPresenter(registry));
-  private final StubClientListView v = (StubClientListView) p.getView();
+  final ClientListPresenter p = bind(new ClientListPresenter(registry));
+  final StubClientListView v = (StubClientListView) p.getView();
+  final StubCellTable<ClientModel> table = (StubCellTable<ClientModel>) p.getTable();
 
   @Test
   public void twoClients() {
@@ -28,7 +29,6 @@ public class ClientListPresenterTest extends AbstractPresenterTest {
     dtos.add(new ClientDto("2", "client b"));
     async.getCallback(GetClientsAction.class).onSuccess(new GetClientsResult(dtos));
 
-    StubCellTable<ClientModel> table = (StubCellTable<ClientModel>) p.getTable();
     assertThat(table.getData().get(0).name.get(), is("client a"));
     assertThat(table.getData().get(1).name.get(), is("client b"));
   }

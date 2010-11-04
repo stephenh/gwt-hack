@@ -6,6 +6,7 @@ import static org.gwtmpv.widgets.cellview.Cells.boundProperty;
 import static org.gwtmpv.widgets.cellview.Cells.newColumn;
 import static org.gwtmpv.widgets.cellview.Cells.newHyperlinkCell;
 import static org.gwtmpv.widgets.cellview.Cells.newTextCell;
+import static org.gwtmpv.widgets.cellview.Cells.newTextHeader;
 
 import org.gwtmpv.GenPlace;
 import org.gwtmpv.dispatch.client.SuccessCallback;
@@ -39,9 +40,9 @@ public class ClientListPresenter extends AbstractPresenter<IsClientListView> {
     super.onBind();
 
     ClientModelBinding cb = new ClientModelBinding();
-    table.addColumn(newColumn(boundProperty(cb.id()), newTextCell()));
-    table.addColumn(newColumn(boundProperty(cb.name()), newTextCell()));
-    table.addColumn(newColumn(new ClientHyperlinkValue(), newHyperlinkCell()));
+    table.addColumn(newColumn(boundProperty(cb.id()), newTextCell()), newTextHeader("Id"));
+    table.addColumn(newColumn(boundProperty(cb.name()), newTextCell()), newTextHeader("Name"));
+    table.addColumn(newColumn(new ClientHyperlinkValue(), newHyperlinkCell()), newTextHeader("Actions"));
     view.clientsPanel().add(table);
 
     async.execute(new GetClientsAction(0, 10), new OnClientsCallback());

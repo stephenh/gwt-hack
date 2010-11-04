@@ -50,7 +50,7 @@ public class ClientListPresenter extends AbstractPresenter<IsClientListView> {
   /** Makes hyperlink data for each client row--would be nice to have this come from a place/something. */
   private class ClientHyperlinkValue extends ColumnValue<ClientModel, IsHyperlinkCell.Data> {
     public Data get(ClientModel client) {
-      return new Data("#client;id=" + client.id, "view");
+      return new Data("#client;id=" + client.id.get(), "view");
     }
   }
 

@@ -1,10 +1,9 @@
 package com.bizo.gwthack.client;
 
-import org.gwtmpv.dispatch.client.util.OutstandingDispatchAsync;
-import org.gwtmpv.place.PlaceManager;
-import org.gwtmpv.place.tokenizer.Tokenizer;
-
-import com.google.gwt.event.shared.EventBus;
+import com.google.gwt.event.shared.*;
+import org.gwtmpv.dispatch.client.util.*;
+import org.gwtmpv.place.*;
+import org.gwtmpv.place.tokenizer.*;
 
 public interface AppRegistry {
 

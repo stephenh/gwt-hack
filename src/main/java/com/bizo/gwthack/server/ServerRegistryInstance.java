@@ -1,11 +1,7 @@
 package com.bizo.gwthack.server;
 
-import org.gwtmpv.dispatch.server.ActionDispatch;
-import org.gwtmpv.dispatch.server.DefaultActionDispatch;
-
-import com.bizo.gwthack.server.handlers.GetClientHandler;
-import com.bizo.gwthack.server.handlers.GetClientsHandler;
-import com.bizo.gwthack.server.handlers.SaveClientHandler;
+import com.bizo.gwthack.server.handlers.*;
+import org.gwtmpv.dispatch.server.*;
 
 public class ServerRegistryInstance implements ServerRegistry {
 

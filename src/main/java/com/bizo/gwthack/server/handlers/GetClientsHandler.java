@@ -1,11 +1,9 @@
 package com.bizo.gwthack.server.handlers;
 
-import java.util.ArrayList;
-
-import com.bizo.gwthack.server.data.Clients;
-import com.bizo.gwthack.shared.messages.GetClientsAction;
-import com.bizo.gwthack.shared.messages.GetClientsResult;
-import com.bizo.gwthack.shared.model.ClientDto;
+import com.bizo.gwthack.server.data.*;
+import com.bizo.gwthack.shared.messages.*;
+import com.bizo.gwthack.shared.model.*;
+import java.util.*;
 
 public class GetClientsHandler extends AbstractHandler<GetClientsAction, GetClientsResult> {
 

@@ -1,8 +1,6 @@
 package com.bizo.gwthack.server;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
+import javax.servlet.*;
 
 public class ServerRegistryListener implements ServletContextListener {
 

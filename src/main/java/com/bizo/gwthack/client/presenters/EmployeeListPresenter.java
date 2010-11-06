@@ -1,9 +1,8 @@
 package com.bizo.gwthack.client.presenters;
 
-import org.gwtmpv.GenPlace;
-
-import com.bizo.gwthack.client.AppRegistry;
-import com.bizo.gwthack.client.views.IsEmployeeListView;
+import com.bizo.gwthack.client.*;
+import com.bizo.gwthack.client.views.*;
+import org.gwtmpv.*;
 
 public class EmployeeListPresenter extends AbstractPresenter<IsEmployeeListView> {
 

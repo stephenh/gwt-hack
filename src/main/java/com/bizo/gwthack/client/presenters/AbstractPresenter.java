@@ -1,13 +1,12 @@
 package com.bizo.gwthack.client.presenters;
 
-import org.gwtmpv.dispatch.client.util.OutstandingDispatchAsync;
-import org.gwtmpv.model.dsl.Binder;
-import org.gwtmpv.place.PlaceRequest;
-import org.gwtmpv.presenter.BasicPresenter;
-import org.gwtmpv.widgets.IsWidget;
-
-import com.bizo.gwthack.client.AppRegistry;
-import com.google.gwt.event.shared.EventBus;
+import com.bizo.gwthack.client.*;
+import com.google.gwt.event.shared.*;
+import org.gwtmpv.dispatch.client.util.*;
+import org.gwtmpv.model.dsl.*;
+import org.gwtmpv.place.*;
+import org.gwtmpv.presenter.*;
+import org.gwtmpv.widgets.*;
 
 public abstract class AbstractPresenter<D extends IsWidget> extends BasicPresenter<D> {
 

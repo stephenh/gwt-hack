@@ -1,8 +1,7 @@
 package com.bizo.gwthack.client.presenters;
 
-import org.junit.Test;
-
-import com.bizo.gwthack.client.StubRegistryInstance;
+import com.bizo.gwthack.client.*;
+import org.junit.*;
 
 public class AppPresenterTest {
 

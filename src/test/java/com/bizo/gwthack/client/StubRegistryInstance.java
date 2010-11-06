@@ -1,13 +1,10 @@
 package com.bizo.gwthack.client;
 
-import org.gwtmpv.bus.StubEventBus;
-import org.gwtmpv.dispatch.client.util.StubDispatchAsync;
-import org.gwtmpv.dispatch.client.util.StubOutstandingDispatchAsync;
-import org.gwtmpv.place.DefaultPlaceManager;
-import org.gwtmpv.place.PlaceManager;
-import org.gwtmpv.place.history.StubHistory;
-import org.gwtmpv.place.tokenizer.DefaultTokenizer;
-import org.gwtmpv.place.tokenizer.Tokenizer;
+import org.gwtmpv.bus.*;
+import org.gwtmpv.dispatch.client.util.*;
+import org.gwtmpv.place.*;
+import org.gwtmpv.place.history.*;
+import org.gwtmpv.place.tokenizer.*;
 
 public class StubRegistryInstance implements AppRegistry {
 

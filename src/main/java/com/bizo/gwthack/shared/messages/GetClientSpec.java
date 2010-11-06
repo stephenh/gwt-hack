@@ -1,10 +1,7 @@
 package com.bizo.gwthack.shared.messages;
 
-import org.gwtmpv.GenDispatch;
-import org.gwtmpv.In;
-import org.gwtmpv.Out;
-
-import com.bizo.gwthack.shared.model.ClientDto;
+import com.bizo.gwthack.shared.model.*;
+import org.gwtmpv.*;
 
 @GenDispatch
 public class GetClientSpec {

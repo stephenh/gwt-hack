@@ -1,9 +1,7 @@
 package com.bizo.gwthack.server.data;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.bizo.gwthack.shared.model.ClientDto;
+import com.bizo.gwthack.shared.model.*;
+import java.util.*;
 
 /** Fake server-side data store. */
 public class Clients {

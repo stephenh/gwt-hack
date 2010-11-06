@@ -1,26 +1,18 @@
 package com.bizo.gwthack.client.presenters;
 
-import static org.gwtmpv.model.Models.toModels;
-import static org.gwtmpv.widgets.Widgets.newCellTable;
-import static org.gwtmpv.widgets.cellview.Cells.boundProperty;
-import static org.gwtmpv.widgets.cellview.Cells.newColumn;
-import static org.gwtmpv.widgets.cellview.Cells.newHyperlinkCell;
-import static org.gwtmpv.widgets.cellview.Cells.newTextCell;
-import static org.gwtmpv.widgets.cellview.Cells.newTextHeader;
+import static org.gwtmpv.model.Models.*;
+import static org.gwtmpv.widgets.Widgets.*;
+import static org.gwtmpv.widgets.cellview.Cells.*;
 
-import org.gwtmpv.GenPlace;
-import org.gwtmpv.dispatch.client.SuccessCallback;
-import org.gwtmpv.widgets.IsCellTable;
-import org.gwtmpv.widgets.cellview.ColumnValue;
-import org.gwtmpv.widgets.cellview.IsHyperlinkCell;
+import com.bizo.gwthack.client.*;
+import com.bizo.gwthack.client.model.*;
+import com.bizo.gwthack.client.views.*;
+import com.bizo.gwthack.shared.messages.*;
+import org.gwtmpv.*;
+import org.gwtmpv.dispatch.client.*;
+import org.gwtmpv.widgets.*;
+import org.gwtmpv.widgets.cellview.*;
 import org.gwtmpv.widgets.cellview.IsHyperlinkCell.Data;
-
-import com.bizo.gwthack.client.AppRegistry;
-import com.bizo.gwthack.client.model.ClientModel;
-import com.bizo.gwthack.client.model.ClientModelBinding;
-import com.bizo.gwthack.client.views.IsClientListView;
-import com.bizo.gwthack.shared.messages.GetClientsAction;
-import com.bizo.gwthack.shared.messages.GetClientsResult;
 
 public class ClientListPresenter extends AbstractPresenter<IsClientListView> {
 

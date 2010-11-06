@@ -1,12 +1,8 @@
 package com.bizo.gwthack.shared.messages;
 
-import java.util.ArrayList;
-
-import org.gwtmpv.GenDispatch;
-import org.gwtmpv.In;
-import org.gwtmpv.Out;
-
-import com.bizo.gwthack.shared.model.ClientDto;
+import com.bizo.gwthack.shared.model.*;
+import java.util.*;
+import org.gwtmpv.*;
 
 @GenDispatch
 public class GetClientsSpec {

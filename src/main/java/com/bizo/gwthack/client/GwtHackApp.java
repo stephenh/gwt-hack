@@ -1,13 +1,9 @@
 package com.bizo.gwthack.client;
 
-import org.gwtmpv.place.PlaceManager;
-
-import com.bizo.gwthack.client.presenters.AppPresenter;
-import com.bizo.gwthack.client.presenters.ClientListPlace;
-import com.bizo.gwthack.client.presenters.ClientPlace;
-import com.bizo.gwthack.client.presenters.EmployeeListPlace;
-import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.user.client.ui.RootPanel;
+import com.bizo.gwthack.client.presenters.*;
+import com.google.gwt.core.client.*;
+import com.google.gwt.user.client.ui.*;
+import org.gwtmpv.place.*;
 
 public class GwtHackApp implements EntryPoint {
 

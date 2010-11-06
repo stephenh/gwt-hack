@@ -1,19 +1,16 @@
 package com.bizo.gwthack.client.presenters;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.*;
 
-import java.util.ArrayList;
-
-import org.gwtmpv.widgets.StubCellTable;
-import org.gwtmpv.widgets.cellview.StubHyperlinkCell;
-import org.junit.Test;
-
-import com.bizo.gwthack.client.model.ClientModel;
-import com.bizo.gwthack.client.views.StubClientListView;
-import com.bizo.gwthack.shared.messages.GetClientsAction;
-import com.bizo.gwthack.shared.messages.GetClientsResult;
-import com.bizo.gwthack.shared.model.ClientDto;
+import com.bizo.gwthack.client.model.*;
+import com.bizo.gwthack.client.views.*;
+import com.bizo.gwthack.shared.messages.*;
+import com.bizo.gwthack.shared.model.*;
+import java.util.*;
+import org.gwtmpv.widgets.*;
+import org.gwtmpv.widgets.cellview.*;
+import org.junit.*;
 
 public class ClientListPresenterTest extends AbstractPresenterTest {
 

@@ -1,19 +1,15 @@
 package com.bizo.gwthack.client.presenters;
 
-import static org.gwtmpv.testing.MpvMatchers.hasPlaceRequests;
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.gwtmpv.testing.MpvMatchers.*;
+import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import org.junit.Test;
-
-import com.bizo.gwthack.client.model.ClientModel;
-import com.bizo.gwthack.client.views.StubClientView;
-import com.bizo.gwthack.shared.messages.SaveClientAction;
-import com.bizo.gwthack.shared.messages.SaveClientResult;
-import com.bizo.gwthack.shared.model.ClientDto;
+import com.bizo.gwthack.client.model.*;
+import com.bizo.gwthack.client.views.*;
+import com.bizo.gwthack.shared.messages.*;
+import com.bizo.gwthack.shared.model.*;
+import java.util.*;
+import org.junit.*;
 
 public class ClientPresenterTest extends AbstractPresenterTest {
 

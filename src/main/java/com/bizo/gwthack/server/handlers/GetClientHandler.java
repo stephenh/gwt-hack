@@ -1,9 +1,8 @@
 package com.bizo.gwthack.server.handlers;
 
-import com.bizo.gwthack.server.data.Clients;
-import com.bizo.gwthack.shared.messages.GetClientAction;
-import com.bizo.gwthack.shared.messages.GetClientResult;
-import com.bizo.gwthack.shared.model.ClientDto;
+import com.bizo.gwthack.server.data.*;
+import com.bizo.gwthack.shared.messages.*;
+import com.bizo.gwthack.shared.model.*;
 
 public class GetClientHandler extends AbstractHandler<GetClientAction, GetClientResult> {
 

@@ -1,20 +1,14 @@
 package com.bizo.gwthack.client.presenters;
 
-import org.gwtmpv.GenPlace;
-import org.gwtmpv.dispatch.client.SuccessCallback;
-import org.gwtmpv.model.commands.UiCommand;
-import org.gwtmpv.model.properties.AbstractPropertyFormatter;
-import org.gwtmpv.model.properties.Property;
-import org.gwtmpv.place.PlaceRequest;
-
-import com.bizo.gwthack.client.AppRegistry;
-import com.bizo.gwthack.client.model.ClientModel;
-import com.bizo.gwthack.client.views.IsClientView;
-import com.bizo.gwthack.shared.messages.GetClientAction;
-import com.bizo.gwthack.shared.messages.GetClientResult;
-import com.bizo.gwthack.shared.messages.SaveClientAction;
-import com.bizo.gwthack.shared.messages.SaveClientCommand;
-import com.bizo.gwthack.shared.messages.SaveClientResult;
+import com.bizo.gwthack.client.*;
+import com.bizo.gwthack.client.model.*;
+import com.bizo.gwthack.client.views.*;
+import com.bizo.gwthack.shared.messages.*;
+import org.gwtmpv.*;
+import org.gwtmpv.dispatch.client.*;
+import org.gwtmpv.model.commands.*;
+import org.gwtmpv.model.properties.*;
+import org.gwtmpv.place.*;
 
 public class ClientPresenter extends AbstractPresenter<IsClientView> {
 

@@ -1,16 +1,11 @@
 package com.bizo.gwthack.client.presenters;
 
-import org.gwtmpv.place.PlaceRequest;
-import org.gwtmpv.presenter.Presenter;
-import org.gwtmpv.presenter.Slot;
-
-import com.bizo.gwthack.client.AppRegistry;
-import com.bizo.gwthack.client.views.IsAppView;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.event.dom.client.HasClickHandlers;
-import com.google.gwt.event.shared.EventBus;
-import com.google.gwt.event.shared.HandlerRegistration;
+import com.bizo.gwthack.client.*;
+import com.bizo.gwthack.client.views.*;
+import com.google.gwt.event.dom.client.*;
+import com.google.gwt.event.shared.*;
+import org.gwtmpv.place.*;
+import org.gwtmpv.presenter.*;
 
 public class AppPresenter extends AbstractPresenter<IsAppView> {
 

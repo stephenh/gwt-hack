@@ -1,12 +1,8 @@
 package com.bizo.gwthack.server;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
-
-import org.gwtmpv.dispatch.server.ActionDispatch;
-import org.gwtmpv.dispatch.server.ExecutionContext;
-import org.gwtmpv.dispatch.server.SessionIdValidator;
-import org.gwtmpv.dispatch.server.servlet.AbstractDispatchServiceServlet;
+import javax.servlet.*;
+import org.gwtmpv.dispatch.server.*;
+import org.gwtmpv.dispatch.server.servlet.*;
 
 /** Just a wrapper for the Dispatcher servlet in order to log received actions. */
 public class DispatchServlet extends AbstractDispatchServiceServlet {

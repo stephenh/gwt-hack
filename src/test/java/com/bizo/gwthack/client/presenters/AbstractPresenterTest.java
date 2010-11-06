@@ -1,12 +1,11 @@
 package com.bizo.gwthack.client.presenters;
 
-import org.gwtmpv.bus.StubEventBus;
-import org.gwtmpv.dispatch.client.util.StubOutstandingDispatchAsync;
-import org.gwtmpv.presenter.Presenter;
-import org.gwtmpv.widgets.StubWidgetsProvider;
-import org.gwtmpv.widgets.cellview.StubCellsProvider;
-
-import com.bizo.gwthack.client.StubRegistryInstance;
+import com.bizo.gwthack.client.*;
+import org.gwtmpv.bus.*;
+import org.gwtmpv.dispatch.client.util.*;
+import org.gwtmpv.presenter.*;
+import org.gwtmpv.widgets.*;
+import org.gwtmpv.widgets.cellview.*;
 
 public class AbstractPresenterTest {
 

@@ -1,12 +1,10 @@
 package com.bizo.gwthack.client.model;
 
-import static org.gwtmpv.model.properties.NewProperty.stringProperty;
+import static org.gwtmpv.model.properties.NewProperty.*;
 
-import org.gwtmpv.model.AbstractModel;
-import org.gwtmpv.model.properties.StringProperty;
-
-import com.bizo.gwthack.shared.model.ClientDto;
-import com.bizo.gwthack.shared.model.ClientDtoBinding;
+import com.bizo.gwthack.shared.model.*;
+import org.gwtmpv.model.*;
+import org.gwtmpv.model.properties.*;
 
 /** Fun model stuff around the {@link ClientDto}. */
 public class ClientModel extends AbstractModel<ClientDto> {

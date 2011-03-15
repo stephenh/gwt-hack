@@ -22,27 +22,27 @@ public class ClientPresenterTest extends AbstractPresenterTest {
   public void fillsInFieldsOnBind() {
     dto.name = "foo";
     bind();
-    assertThat(v.name.getText(), is("foo"));
-    assertThat(v.nameLeft.getText(), is("47 left"));
+    assertThat(v.name().getText(), is("foo"));
+    assertThat(v.nameLeft().getText(), is("47 left"));
   }
 
   @Test
   public void keyUpChangesNameLeft() {
     dto.name = "foo";
     bind();
-    assertThat(v.name.getText(), is("foo"));
-    assertThat(v.nameLeft.getText(), is("47 left"));
+    assertThat(v.name().getText(), is("foo"));
+    assertThat(v.nameLeft().getText(), is("47 left"));
 
-    v.name.press('b');
-    assertThat(v.nameLeft.getText(), is("46 left"));
+    v.name().press('b');
+    assertThat(v.nameLeft().getText(), is("46 left"));
   }
 
   @Test
   public void saving() {
     dto.name = "foo";
     bind();
-    v.name.type("bar");
-    v.submit.click();
+    v.name().type("bar");
+    v.submit().click();
 
     // save on the server is successful
     assertThat(async.getAction(SaveClientAction.class).getClient().name, is("bar"));

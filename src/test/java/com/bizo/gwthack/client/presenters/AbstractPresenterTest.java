@@ -7,7 +7,7 @@ import org.gwtmpv.presenter.*;
 import org.gwtmpv.widgets.*;
 import org.gwtmpv.widgets.cellview.*;
 
-public class AbstractPresenterTest {
+public abstract class AbstractPresenterTest {
 
   static {
     StubWidgetsProvider.install();

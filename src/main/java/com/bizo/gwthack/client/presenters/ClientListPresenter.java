@@ -1,5 +1,6 @@
 package com.bizo.gwthack.client.presenters;
 
+import static com.bizo.gwthack.client.views.AppViews.*;
 import static org.gwtmpv.model.Models.*;
 import static org.gwtmpv.widgets.Widgets.*;
 import static org.gwtmpv.widgets.cellview.Cells.*;
@@ -24,7 +25,7 @@ public class ClientListPresenter extends AbstractPresenter<IsClientListView> {
   }
 
   public ClientListPresenter(final AppRegistry registry) {
-    super(registry.getAppViews().newClientListView(), registry);
+    super(newClientListView(), registry);
   }
 
   @Override

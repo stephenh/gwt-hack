@@ -27,8 +27,8 @@ public class ClientListPresenterTest extends AbstractPresenterTest {
     dtos.add(new ClientDto("2", "client b"));
     async.getCallback(GetClientsAction.class).onSuccess(new GetClientsResult(dtos));
 
-    assertThat(table.getData().get(0).name.get(), is("client a"));
-    assertThat(table.getData().get(1).name.get(), is("client b"));
+    assertThat(table.getVisibleItem(0).name.get(), is("client a"));
+    assertThat(table.getVisibleItem(1).name.get(), is("client b"));
   }
 
   @Test

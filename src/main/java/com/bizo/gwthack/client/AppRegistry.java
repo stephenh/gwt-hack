@@ -7,8 +7,6 @@ import org.gwtmpv.place.tokenizer.*;
 
 public interface AppRegistry {
 
-  AppViews getAppViews();
-
   Tokenizer getTokenizer();
 
   PlaceManager getPlaceManager();

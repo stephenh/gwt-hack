@@ -1,5 +1,7 @@
 package com.bizo.gwthack.client.presenters;
 
+import static com.bizo.gwthack.client.views.AppViews.*;
+
 import com.bizo.gwthack.client.*;
 import com.bizo.gwthack.client.model.*;
 import com.bizo.gwthack.client.views.*;
@@ -25,7 +27,7 @@ public class ClientPresenter extends AbstractPresenter<IsClientView> {
   }
 
   public ClientPresenter(final AppRegistry registry, final ClientModel client) {
-    super(registry.getAppViews().newClientView(), registry);
+    super(newClientView(), registry);
     this.client = client;
   }
 
@@ -39,7 +41,7 @@ public class ClientPresenter extends AbstractPresenter<IsClientView> {
   }
 
   /** Saves the client and returns to the client list. */
-  private final UiCommand saveCommand = new SaveClientCommand(async) {
+  private final UiCommand saveCommand = new SaveClientCommand(eventBus, async) {
     protected SaveClientAction createAction() {
       return new SaveClientAction(client.getDto());
     }

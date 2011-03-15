@@ -1,5 +1,6 @@
 package com.bizo.gwthack.client;
 
+import com.bizo.gwthack.client.views.*;
 import com.google.gwt.event.shared.*;
 import org.gwtmpv.dispatch.client.util.*;
 import org.gwtmpv.place.*;
@@ -12,14 +13,13 @@ public class AppRegistryInstance implements AppRegistry {
   private final PlaceManager placeManager;
   private final OutstandingDispatchAsync async;
   private final Tokenizer tokenizer;
-  private final AppViews views;
 
   public AppRegistryInstance() {
     eventBus = new SimpleEventBus();
     async = new OutstandingDispatchAsync(eventBus);
     tokenizer = new DefaultTokenizer();
     placeManager = new DefaultPlaceManager(eventBus, tokenizer, new GwtHistory());
-    views = new GwtViews();
+    AppViews.setProvider(new GwtViewsProvider());
   }
 
   @Override
@@ -40,11 +40,6 @@ public class AppRegistryInstance implements AppRegistry {
   @Override
   public Tokenizer getTokenizer() {
     return tokenizer;
-  }
-
-  @Override
-  public AppViews getAppViews() {
-    return views;
   }
 
 }

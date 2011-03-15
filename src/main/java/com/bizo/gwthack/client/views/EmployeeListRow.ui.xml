@@ -1,0 +1,13 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:gwt="urn:import:com.google.gwt.user.client.ui">
+	<gwt:HTMLPanel tag="table">
+		<tr>
+			<td>
+				<gwt:InlineLabel ui:field="name" />
+			</td>
+			<td>
+				<gwt:InlineLabel ui:field="description" />
+			</td>
+		</tr>
+	</gwt:HTMLPanel>
+</ui:UiBinder>

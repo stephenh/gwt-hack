@@ -14,8 +14,7 @@ import org.junit.*;
 public class ClientPresenterTest extends AbstractPresenterTest {
 
   private final ClientDto dto = new ClientDto();
-  private final ClientModel client = new ClientModel(dto);
-  private final ClientPresenter p = new ClientPresenter(registry, client);
+  private ClientPresenter p;
   private StubClientView v;
 
   @Test
@@ -52,6 +51,7 @@ public class ClientPresenterTest extends AbstractPresenterTest {
   }
 
   private void bind() {
+    p = new ClientPresenter(registry, new ClientModel(dto));
     p.bind();
     v = (StubClientView) p.getView();
   }

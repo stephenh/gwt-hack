@@ -1,6 +1,8 @@
 package com.bizo.gwthack.client;
 
+import com.bizo.gwthack.client.resources.*;
 import com.bizo.gwthack.client.views.*;
+import com.google.gwt.core.client.*;
 import com.google.gwt.event.shared.*;
 import org.gwtmpv.dispatch.client.util.*;
 import org.gwtmpv.place.*;
@@ -13,6 +15,7 @@ public class AppRegistryInstance implements AppRegistry {
   private final PlaceManager placeManager;
   private final OutstandingDispatchAsync async;
   private final Tokenizer tokenizer;
+  private final AppResources resources = GWT.create(AppResources.class);
 
   public AppRegistryInstance() {
     eventBus = new SimpleEventBus();
@@ -40,6 +43,11 @@ public class AppRegistryInstance implements AppRegistry {
   @Override
   public Tokenizer getTokenizer() {
     return tokenizer;
+  }
+
+  @Override
+  public AppResources getAppResources() {
+    return resources;
   }
 
 }

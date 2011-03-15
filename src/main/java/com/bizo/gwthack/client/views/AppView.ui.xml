@@ -3,8 +3,8 @@
     <div style="margin: auto; width: 300px">
       <h1>GwtHack</h1>
       <div>
-        <gwt:Anchor ui:field="clientsAnchor">Clients</gwt:Anchor>
-        <gwt:Anchor ui:field="employeesAnchor">Employees</gwt:Anchor>
+        <gwt:Hyperlink targetHistoryToken="clients">Clients</gwt:Hyperlink>
+        <gwt:Hyperlink targetHistoryToken="employees">Employees</gwt:Hyperlink>
         <gwt:SimplePanel ui:field="content" />
       </div>
     </div>

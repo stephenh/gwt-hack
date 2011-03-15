@@ -1,5 +1,6 @@
 package com.bizo.gwthack.client;
 
+import com.bizo.gwthack.client.resources.*;
 import com.bizo.gwthack.client.views.*;
 import org.gwtmpv.bus.*;
 import org.gwtmpv.dispatch.client.*;
@@ -16,6 +17,7 @@ public class StubRegistryInstance implements AppRegistry {
   private final StubHistory history = new StubHistory();
   private final PlaceManager placeManager = new DefaultPlaceManager(bus, tokenizer, history);
   private final StubOutstandingDispatchAsync async = new StubOutstandingDispatchAsync(bus, new StubDispatchAsync());
+  private final AppResources resources = new StubAppResources();
 
   public StubRegistryInstance() {
     StubWidgetsProvider.install();
@@ -40,6 +42,11 @@ public class StubRegistryInstance implements AppRegistry {
   @Override
   public StubOutstandingDispatchAsync getAsync() {
     return async;
+  }
+
+  @Override
+  public AppResources getAppResources() {
+    return resources;
   }
 
 }

@@ -16,7 +16,7 @@ public class ClientPresenter extends AbstractPresenter<IsClientView> {
 
   private final ClientModel client;
 
-  @GenPlace(value = "client", async = false)
+  @GenPlace(name = "client", async = false)
   public static void show(final AppRegistry registry, final AppPresenter app, PlaceRequest request) {
     final String id = request.getParameter("id", null);
     registry.getAsync().execute(new GetClientAction(id), new SuccessCallback<GetClientResult>() {
@@ -41,7 +41,7 @@ public class ClientPresenter extends AbstractPresenter<IsClientView> {
   }
 
   /** Saves the client and returns to the client list. */
-  private final UiCommand saveCommand = new SaveClientCommand(eventBus, async) {
+  private final UiCommand saveCommand = new SaveClientCommand(async) {
     protected SaveClientAction createAction() {
       return new SaveClientAction(client.getDto());
     }

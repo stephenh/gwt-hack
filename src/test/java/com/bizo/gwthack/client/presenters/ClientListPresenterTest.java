@@ -1,5 +1,6 @@
 package com.bizo.gwthack.client.presenters;
 
+import static org.gwtmpv.widgets.Widgets.*;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
@@ -20,6 +21,8 @@ public class ClientListPresenterTest extends AbstractPresenterTest {
 
   @Test
   public void twoClients() {
+    newSimplePanel();
+
     p.bind();
 
     ArrayList<ClientDto> dtos = new ArrayList<ClientDto>();

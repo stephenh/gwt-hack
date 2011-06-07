@@ -1,4 +1,4 @@
 <factorypath>
-    <factorypathentry kind="WKSPJAR" id="/gwt-hack/bin/lib/buildtime/jars/gwt-mpv-apt.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="WKSPJAR" id="/gwt-hack/bin/lib/default/jars/bindgen-gwt.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="WKSPJAR" id="/gwt-hack/bin/lib/provided/jars/gwt-mpv-apt.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="WKSPJAR" id="/gwt-hack/bin/lib/provided/jars/bindgen-gwt.jar" enabled="true" runInBatchMode="false"/>
 </factorypath>

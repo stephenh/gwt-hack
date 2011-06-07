@@ -7,6 +7,7 @@
   </source>
   <source path="shared" />
 
+  <inherits name="Lombok" />
   <inherits name="com.google.gwt.user.User" />             <!-- standard gwt components -->
   <inherits name="com.google.gwt.uibinder.UiBinder" />     <!-- uibinder -->
   <inherits name="com.google.gwt.resources.Resources" />   <!-- Client Bundles -->

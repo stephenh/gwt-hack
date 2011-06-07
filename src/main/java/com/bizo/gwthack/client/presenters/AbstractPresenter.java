@@ -1,7 +1,7 @@
 package com.bizo.gwthack.client.presenters;
 
 import com.bizo.gwthack.client.*;
-import com.google.gwt.event.shared.*;
+import com.google.web.bindery.event.shared.*;
 import org.gwtmpv.dispatch.client.util.*;
 import org.gwtmpv.model.dsl.*;
 import org.gwtmpv.place.*;

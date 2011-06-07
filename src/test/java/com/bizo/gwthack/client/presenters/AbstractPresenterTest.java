@@ -12,6 +12,7 @@ public abstract class AbstractPresenterTest {
   static {
     StubWidgetsProvider.install();
     StubCellsProvider.install();
+    StubGWTBridge.install();
   }
 
   protected final StubRegistryInstance registry = new StubRegistryInstance();

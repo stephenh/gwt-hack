@@ -9,6 +9,7 @@ import com.bizo.gwthack.client.*;
 import com.bizo.gwthack.client.model.*;
 import com.bizo.gwthack.client.views.*;
 import com.bizo.gwthack.shared.messages.*;
+import lombok.*;
 import org.gwtmpv.*;
 import org.gwtmpv.dispatch.client.*;
 import org.gwtmpv.widgets.*;
@@ -19,9 +20,19 @@ public class ClientListPresenter extends AbstractPresenter<IsClientListView> {
 
   private final IsCellTable<ClientModel> table = newCellTable();
 
-  @GenPlace(value = "clients", async = false)
+  @GenPlace(name = "clients", async = false)
   public static void show(final AppRegistry registry, final AppPresenter appPresenter) {
     appPresenter.show(new ClientListPresenter(registry));
+
+    val f = new Foo();
+    f.name = "asdF";
+    System.out.println(f.getName());
+  }
+
+  @lombok.Data
+  public static class Foo {
+    String name;
+    String name2;
   }
 
   public ClientListPresenter(final AppRegistry registry) {

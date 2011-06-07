@@ -1,2 +1,5 @@
 bin
+reports
+target
+gwt-unitCache
 classes

@@ -16,7 +16,7 @@
     <dependency org="org.gwtmpv" name="gwt-mpv-dev" rev="latest.integration" conf="provided"/>
 
     <!-- build time only dependencies -->
-    <dependency org="org.gwtmpv" name="gwt-mpv-apt" rev="2.1" conf="provided"/>
+    <dependency org="org.gwtmpv" name="gwt-mpv-apt" rev="2.2" conf="provided"/>
     <dependency org="javax.servlet" name="servlet-api" rev="2.5" conf="provided" />
 
     <!-- test time only dependencies -->

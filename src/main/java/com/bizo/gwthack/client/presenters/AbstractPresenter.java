@@ -12,7 +12,7 @@ public abstract class AbstractPresenter<D extends IsWidget> extends BasicPresent
 
   protected final AppRegistry registry;
   protected final OutstandingDispatchAsync async;
-  protected final Binder binder = new Binder(this);
+  protected final Binder binder = new Binder();
   protected final EventBus eventBus;
 
   public AbstractPresenter(final D display, final AppRegistry registry) {

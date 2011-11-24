@@ -1,6 +1,7 @@
 package com.bizo.gwthack.client.presenters;
 
 import static com.bizo.gwthack.client.views.AppViews.*;
+import static org.gwtmpv.model.dsl.TakesValues.*;
 
 import com.bizo.gwthack.client.*;
 import com.bizo.gwthack.client.model.*;
@@ -35,7 +36,7 @@ public class ClientPresenter extends AbstractPresenter<IsClientView> {
   protected void onBind() {
     super.onBind();
     binder.bind(client.name).to(view.name());
-    binder.bind(makeNameLeft()).toTextOf(view.nameLeft());
+    binder.bind(makeNameLeft()).to(textOf(view.nameLeft()));
     binder.bind(saveCommand).to(view.submit());
     binder.enhance(view.name());
   }

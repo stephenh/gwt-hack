@@ -12,8 +12,8 @@
     <dependency org="com.google.gwt" name="gwt-dev" rev="0.0.10307" conf="provided" force="true"/>
     <dependency org="com.google.gwt" name="gwt-servlet" rev="0.0.10307" conf="compile" force="true"/>
 
-    <dependency org="org.gwtmpv" name="gwt-mpv-user" rev="latest.integration" conf="compile"/>
-    <dependency org="org.gwtmpv" name="gwt-mpv-dev" rev="latest.integration" conf="provided"/>
+    <dependency org="org.gwtmpv" name="gwt-mpv-user" rev="1.2.4" conf="compile"/>
+    <dependency org="org.gwtmpv" name="gwt-mpv-dev" rev="1.2.4" conf="provided"/>
 
     <!-- build time only dependencies -->
     <dependency org="org.gwtmpv" name="gwt-mpv-apt" rev="2.2" conf="provided"/>

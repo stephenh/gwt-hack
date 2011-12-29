@@ -2,13 +2,13 @@ package com.bizo.gwthack.client;
 
 import com.bizo.gwthack.client.resources.*;
 import com.bizo.gwthack.client.views.*;
-import org.gwtmpv.bus.*;
-import org.gwtmpv.dispatch.client.*;
-import org.gwtmpv.dispatch.client.util.*;
-import org.gwtmpv.place.*;
-import org.gwtmpv.place.history.*;
-import org.gwtmpv.place.tokenizer.*;
-import org.gwtmpv.widgets.*;
+import org.tessell.bus.*;
+import org.tessell.dispatch.client.*;
+import org.tessell.dispatch.client.util.*;
+import org.tessell.place.*;
+import org.tessell.place.history.*;
+import org.tessell.place.tokenizer.*;
+import org.tessell.widgets.*;
 
 public class StubRegistryInstance implements AppRegistry {
 

@@ -1,6 +1,6 @@
 package com.bizo.gwthack.server;
 
-import org.gwtmpv.dispatch.server.*;
+import org.tessell.dispatch.server.*;
 
 public interface ServerRegistry {
 

@@ -1,8 +1,8 @@
 package com.bizo.gwthack.client.presenters;
 
-import static org.gwtmpv.testing.MpvMatchers.*;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
+import static org.tessell.testing.TessellMatchers.*;
 
 import com.bizo.gwthack.client.model.*;
 import com.bizo.gwthack.client.views.*;

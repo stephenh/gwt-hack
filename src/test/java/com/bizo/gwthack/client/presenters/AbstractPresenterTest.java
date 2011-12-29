@@ -1,11 +1,11 @@
 package com.bizo.gwthack.client.presenters;
 
 import com.bizo.gwthack.client.*;
-import org.gwtmpv.bus.*;
-import org.gwtmpv.dispatch.client.util.*;
-import org.gwtmpv.presenter.*;
-import org.gwtmpv.widgets.*;
-import org.gwtmpv.widgets.cellview.*;
+import org.tessell.bus.*;
+import org.tessell.dispatch.client.util.*;
+import org.tessell.presenter.*;
+import org.tessell.widgets.*;
+import org.tessell.widgets.cellview.*;
 
 public abstract class AbstractPresenterTest {
 

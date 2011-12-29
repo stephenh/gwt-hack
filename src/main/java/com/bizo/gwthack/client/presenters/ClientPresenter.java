@@ -1,17 +1,17 @@
 package com.bizo.gwthack.client.presenters;
 
 import static com.bizo.gwthack.client.views.AppViews.*;
-import static org.gwtmpv.model.dsl.TakesValues.*;
+import static org.tessell.model.dsl.TakesValues.*;
 
 import com.bizo.gwthack.client.*;
 import com.bizo.gwthack.client.model.*;
 import com.bizo.gwthack.client.views.*;
 import com.bizo.gwthack.shared.messages.*;
-import org.gwtmpv.*;
-import org.gwtmpv.dispatch.client.*;
-import org.gwtmpv.model.commands.*;
-import org.gwtmpv.model.properties.*;
-import org.gwtmpv.place.*;
+import org.tessell.*;
+import org.tessell.dispatch.client.*;
+import org.tessell.model.commands.*;
+import org.tessell.model.properties.*;
+import org.tessell.place.*;
 
 public class ClientPresenter extends AbstractPresenter<IsClientView> {
 

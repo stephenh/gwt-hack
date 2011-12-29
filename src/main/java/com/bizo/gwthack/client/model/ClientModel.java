@@ -1,10 +1,10 @@
 package com.bizo.gwthack.client.model;
 
-import static org.gwtmpv.model.properties.NewProperty.*;
+import static org.tessell.model.properties.NewProperty.*;
 
 import com.bizo.gwthack.shared.model.*;
-import org.gwtmpv.model.*;
-import org.gwtmpv.model.properties.*;
+import org.tessell.model.*;
+import org.tessell.model.properties.*;
 
 /** Fun model stuff around the {@link ClientDto}. */
 public class ClientModel extends AbstractModel<ClientDto> {

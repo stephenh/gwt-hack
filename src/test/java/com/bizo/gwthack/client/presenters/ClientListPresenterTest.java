@@ -1,17 +1,17 @@
 package com.bizo.gwthack.client.presenters;
 
-import static org.gwtmpv.widgets.Widgets.*;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
+import static org.tessell.widgets.Widgets.*;
 
 import com.bizo.gwthack.client.model.*;
 import com.bizo.gwthack.client.views.*;
 import com.bizo.gwthack.shared.messages.*;
 import com.bizo.gwthack.shared.model.*;
 import java.util.*;
-import org.gwtmpv.widgets.*;
-import org.gwtmpv.widgets.cellview.*;
 import org.junit.*;
+import org.tessell.widgets.*;
+import org.tessell.widgets.cellview.*;
 
 public class ClientListPresenterTest extends AbstractPresenterTest {
 

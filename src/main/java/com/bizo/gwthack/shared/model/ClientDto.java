@@ -2,7 +2,7 @@ package com.bizo.gwthack.shared.model;
 
 import com.bizo.gwthack.client.model.*;
 import org.bindgen.*;
-import org.gwtmpv.model.*;
+import org.tessell.model.*;
 
 /** DTO sent to/from server. */
 @Bindable

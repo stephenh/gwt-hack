@@ -1,7 +1,7 @@
 <ui:UiBinder
   xmlns:ui="urn:ui:com.google.gwt.uibinder"
   xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
-  xmlns:mpv="urn:import:org.gwtmpv.widgets">
+  xmlns:mpv="urn:import:org.tessell.widgets">
   <gwt:HTMLPanel>
     Some employees
     

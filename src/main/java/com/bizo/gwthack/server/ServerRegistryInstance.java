@@ -1,7 +1,7 @@
 package com.bizo.gwthack.server;
 
 import com.bizo.gwthack.server.handlers.*;
-import org.gwtmpv.dispatch.server.*;
+import org.tessell.dispatch.server.*;
 
 public class ServerRegistryInstance implements ServerRegistry {
 

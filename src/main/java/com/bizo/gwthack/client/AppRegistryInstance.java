@@ -4,10 +4,10 @@ import com.bizo.gwthack.client.resources.*;
 import com.bizo.gwthack.client.views.*;
 import com.google.gwt.core.client.*;
 import com.google.gwt.event.shared.*;
-import org.gwtmpv.dispatch.client.util.*;
-import org.gwtmpv.place.*;
-import org.gwtmpv.place.history.*;
-import org.gwtmpv.place.tokenizer.*;
+import org.tessell.dispatch.client.util.*;
+import org.tessell.place.*;
+import org.tessell.place.history.*;
+import org.tessell.place.tokenizer.*;
 
 public class AppRegistryInstance implements AppRegistry {
 

@@ -1,8 +1,8 @@
 package com.bizo.gwthack.server;
 
 import javax.servlet.*;
-import org.gwtmpv.dispatch.server.*;
-import org.gwtmpv.dispatch.server.servlet.*;
+import org.tessell.dispatch.server.*;
+import org.tessell.dispatch.server.servlet.*;
 
 /** Just a wrapper for the Dispatcher servlet in order to log received actions. */
 public class DispatchServlet extends AbstractDispatchServiceServlet {

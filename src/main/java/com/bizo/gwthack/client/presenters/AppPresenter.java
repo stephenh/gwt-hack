@@ -4,7 +4,7 @@ import static com.bizo.gwthack.client.views.AppViews.*;
 
 import com.bizo.gwthack.client.*;
 import com.bizo.gwthack.client.views.*;
-import org.gwtmpv.presenter.*;
+import org.tessell.presenter.*;
 
 public class AppPresenter extends AbstractPresenter<IsAppView> {
 

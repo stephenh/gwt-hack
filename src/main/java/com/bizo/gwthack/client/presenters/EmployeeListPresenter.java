@@ -5,7 +5,7 @@ import static com.bizo.gwthack.client.views.AppViews.*;
 import com.bizo.gwthack.client.*;
 import com.bizo.gwthack.client.views.*;
 import com.bizo.gwthack.shared.model.*;
-import org.gwtmpv.*;
+import org.tessell.*;
 
 public class EmployeeListPresenter extends AbstractPresenter<IsEmployeeListView> {
 

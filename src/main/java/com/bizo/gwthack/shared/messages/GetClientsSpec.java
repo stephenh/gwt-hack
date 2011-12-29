@@ -2,7 +2,7 @@ package com.bizo.gwthack.shared.messages;
 
 import com.bizo.gwthack.shared.model.*;
 import java.util.*;
-import org.gwtmpv.*;
+import org.tessell.*;
 
 @GenDispatch
 public class GetClientsSpec {

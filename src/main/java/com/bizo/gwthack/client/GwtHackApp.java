@@ -3,7 +3,7 @@ package com.bizo.gwthack.client;
 import com.bizo.gwthack.client.presenters.*;
 import com.google.gwt.core.client.*;
 import com.google.gwt.user.client.ui.*;
-import org.gwtmpv.place.*;
+import org.tessell.place.*;
 
 public class GwtHackApp implements EntryPoint {
 

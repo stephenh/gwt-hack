@@ -1,19 +1,19 @@
 package com.bizo.gwthack.client.presenters;
 
 import static com.bizo.gwthack.client.views.AppViews.*;
-import static org.gwtmpv.model.Models.*;
-import static org.gwtmpv.widgets.Widgets.*;
-import static org.gwtmpv.widgets.cellview.Cells.*;
+import static org.tessell.model.Models.*;
+import static org.tessell.widgets.Widgets.*;
+import static org.tessell.widgets.cellview.Cells.*;
 
 import com.bizo.gwthack.client.*;
 import com.bizo.gwthack.client.model.*;
 import com.bizo.gwthack.client.views.*;
 import com.bizo.gwthack.shared.messages.*;
-import org.gwtmpv.*;
-import org.gwtmpv.dispatch.client.*;
-import org.gwtmpv.widgets.*;
-import org.gwtmpv.widgets.cellview.*;
-import org.gwtmpv.widgets.cellview.IsHyperlinkCell.Data;
+import org.tessell.*;
+import org.tessell.dispatch.client.*;
+import org.tessell.widgets.*;
+import org.tessell.widgets.cellview.*;
+import org.tessell.widgets.cellview.IsHyperlinkCell.Data;
 
 public class ClientListPresenter extends AbstractPresenter<IsClientListView> {
 

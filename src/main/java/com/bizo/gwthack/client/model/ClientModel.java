@@ -7,7 +7,7 @@ import org.tessell.model.*;
 import org.tessell.model.properties.*;
 
 /** Fun model stuff around the {@link ClientDto}. */
-public class ClientModel extends AbstractModel<ClientDto> {
+public class ClientModel extends AbstractDtoModel<ClientDto> {
 
   private final ClientDtoBinding b = new ClientDtoBinding();
   public final StringProperty id = stringProperty(b.id());

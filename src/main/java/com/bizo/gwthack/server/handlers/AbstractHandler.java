@@ -15,4 +15,9 @@ public abstract class AbstractHandler<A extends Action<R>, R extends Result> imp
     return execute(action);
   }
 
+  @Override
+  public boolean skipCSRFCheck() {
+    return true;
+  }
+
 }

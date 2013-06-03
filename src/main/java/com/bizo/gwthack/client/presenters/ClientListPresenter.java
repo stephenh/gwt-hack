@@ -1,7 +1,6 @@
 package com.bizo.gwthack.client.presenters;
 
 import static com.bizo.gwthack.client.views.AppViews.*;
-import static org.tessell.model.Models.*;
 import static org.tessell.widgets.Widgets.*;
 import static org.tessell.widgets.cellview.Cells.*;
 
@@ -11,7 +10,6 @@ import com.bizo.gwthack.client.views.*;
 import com.bizo.gwthack.shared.messages.*;
 import org.tessell.*;
 import org.tessell.dispatch.client.*;
-import org.tessell.widgets.*;
 import org.tessell.widgets.cellview.*;
 import org.tessell.widgets.cellview.IsHyperlinkCell.Data;
 
@@ -51,7 +49,8 @@ public class ClientListPresenter extends AbstractPresenter<IsClientListView> {
   /** We have the client data. */
   private class OnClientsCallback implements SuccessCallback<GetClientsResult> {
     public void onSuccess(final GetClientsResult result) {
-      table.setRowData(0, toModels(result.getClients()));
+      // toModels was removed from Tessell...need to fix this
+      // table.setRowData(0, toModels(result.getClients()));
     }
   }
 

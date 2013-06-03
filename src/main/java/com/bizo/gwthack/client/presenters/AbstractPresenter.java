@@ -3,10 +3,10 @@ package com.bizo.gwthack.client.presenters;
 import com.bizo.gwthack.client.*;
 import com.google.web.bindery.event.shared.*;
 import org.tessell.dispatch.client.util.*;
+import org.tessell.gwt.user.client.ui.*;
 import org.tessell.model.dsl.*;
 import org.tessell.place.*;
 import org.tessell.presenter.*;
-import org.tessell.widgets.*;
 
 public abstract class AbstractPresenter<D extends IsWidget> extends BasicPresenter<D> {
 

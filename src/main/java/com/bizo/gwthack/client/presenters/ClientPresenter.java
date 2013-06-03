@@ -47,7 +47,7 @@ public class ClientPresenter extends AbstractPresenter<IsClientView> {
       return new SaveClientAction(client.getDto());
     }
 
-    protected void onResult(SaveClientResult result) {
+    protected void onResult() {
       goTo(ClientListPlace.newRequest());
     }
   };

@@ -13,9 +13,9 @@ Setup
 ==============
 
 * Clone the `gwt-hack` repository
-* Install IvyDE in Eclipse
+* Install [IvyDE](http://ant.apache.org/ivy/ivyde/) in Eclipse
 * Import the project into Eclipse
-* Run the gwt-hack launch and it should start up
+* Launch gwt-hack
 
 Capabilities of Tessell 
 ==============

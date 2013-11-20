@@ -2,7 +2,7 @@ Example Tessell Application
 ==================================
 
 Tessell is a GWT application framework that follows a Model View Presenter architecture. The example application shows reloaded, editable
-Client and Employee tables.
+Client and Employee tables that the user can navigate between.
 
 Setup
 ==============
